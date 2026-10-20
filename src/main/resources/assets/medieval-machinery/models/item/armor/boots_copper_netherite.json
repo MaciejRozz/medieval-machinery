@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "medieval-machinery:item/armor/boots_copper_netherite"
+  }
+}

@@ -1,0 +1,157 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_gold_sigil": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "medieval-machinery:order_sigil_gold"
+            ]
+          }
+        ]
+      }
+    },
+    "has_copper_sigil": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "medieval-machinery:order_sigil_copper"
+            ]
+          }
+        ]
+      }
+    },
+    "has_iron_sigil": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "medieval-machinery:order_sigil_iron"
+            ]
+          }
+        ]
+      }
+    },
+    "has_diamond_sigil": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "medieval-machinery:order_sigil_diamond"
+            ]
+          }
+        ]
+      }
+    },
+    "has_redstone_sigil": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "medieval-machinery:order_sigil_redstone"
+            ]
+          }
+        ]
+      }
+    },
+    "has_amethyst_sigil": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "medieval-machinery:order_sigil_amethyst"
+            ]
+          }
+        ]
+      }
+    },
+    "has_lapis_sigil": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "medieval-machinery:order_sigil_lapis"
+            ]
+          }
+        ]
+      }
+    },
+    "has_emerald_sigil": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "medieval-machinery:order_sigil_emerald"
+            ]
+          }
+        ]
+      }
+    },
+    "has_quartz_sigil": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "medieval-machinery:order_sigil_quartz"
+            ]
+          }
+        ]
+      }
+    },
+    "has_coal_sigil": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "medieval-machinery:order_sigil_coal"
+            ]
+          }
+        ]
+      }
+    },
+    "has_netherite_sigil": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "medieval-machinery:order_sigil_netherite"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_gold_sigil",
+      "has_copper_sigil",
+      "has_iron_sigil",
+      "has_diamond_sigil",
+      "has_redstone_sigil",
+      "has_amethyst_sigil",
+      "has_lapis_sigil",
+      "has_emerald_sigil",
+      "has_quartz_sigil",
+      "has_coal_sigil",
+      "has_netherite_sigil"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "medieval-machinery:general_boots"
+    ]
+  }
+}

@@ -1,0 +1,140 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "minecraft:item/diamond_boots"
+  },
+  "overrides": [
+    {
+      "predicate": {
+        "custom_model_data": 100
+      },
+      "model": "medieval-machinery:item/armor/general_boots_gold_normal"
+    },
+    {
+      "predicate": {
+        "custom_model_data": 101
+      },
+      "model": "medieval-machinery:item/armor/general_boots_gold_netherite"
+    },
+    {
+      "predicate": {
+        "custom_model_data": 102
+      },
+      "model": "medieval-machinery:item/armor/general_boots_copper_normal"
+    },
+    {
+      "predicate": {
+        "custom_model_data": 103
+      },
+      "model": "medieval-machinery:item/armor/general_boots_copper_netherite"
+    },
+    {
+      "predicate": {
+        "custom_model_data": 104
+      },
+      "model": "medieval-machinery:item/armor/general_boots_iron_normal"
+    },
+    {
+      "predicate": {
+        "custom_model_data": 105
+      },
+      "model": "medieval-machinery:item/armor/general_boots_iron_netherite"
+    },
+    {
+      "predicate": {
+        "custom_model_data": 106
+      },
+      "model": "medieval-machinery:item/armor/general_boots_diamond_normal"
+    },
+    {
+      "predicate": {
+        "custom_model_data": 107
+      },
+      "model": "medieval-machinery:item/armor/general_boots_diamond_netherite"
+    },
+    {
+      "predicate": {
+        "custom_model_data": 108
+      },
+      "model": "medieval-machinery:item/armor/general_boots_redstone_normal"
+    },
+    {
+      "predicate": {
+        "custom_model_data": 109
+      },
+      "model": "medieval-machinery:item/armor/general_boots_redstone_netherite"
+    },
+    {
+      "predicate": {
+        "custom_model_data": 110
+      },
+      "model": "medieval-machinery:item/armor/general_boots_amethyst_normal"
+    },
+    {
+      "predicate": {
+        "custom_model_data": 111
+      },
+      "model": "medieval-machinery:item/armor/general_boots_amethyst_netherite"
+    },
+    {
+      "predicate": {
+        "custom_model_data": 112
+      },
+      "model": "medieval-machinery:item/armor/general_boots_lapis_normal"
+    },
+    {
+      "predicate": {
+        "custom_model_data": 113
+      },
+      "model": "medieval-machinery:item/armor/general_boots_lapis_netherite"
+    },
+    {
+      "predicate": {
+        "custom_model_data": 114
+      },
+      "model": "medieval-machinery:item/armor/general_boots_emerald_normal"
+    },
+    {
+      "predicate": {
+        "custom_model_data": 115
+      },
+      "model": "medieval-machinery:item/armor/general_boots_emerald_netherite"
+    },
+    {
+      "predicate": {
+        "custom_model_data": 116
+      },
+      "model": "medieval-machinery:item/armor/general_boots_quartz_normal"
+    },
+    {
+      "predicate": {
+        "custom_model_data": 117
+      },
+      "model": "medieval-machinery:item/armor/general_boots_quartz_netherite"
+    },
+    {
+      "predicate": {
+        "custom_model_data": 118
+      },
+      "model": "medieval-machinery:item/armor/general_boots_coal_normal"
+    },
+    {
+      "predicate": {
+        "custom_model_data": 119
+      },
+      "model": "medieval-machinery:item/armor/general_boots_coal_netherite"
+    },
+    {
+      "predicate": {
+        "custom_model_data": 120
+      },
+      "model": "medieval-machinery:item/armor/general_boots_netherite_normal"
+    },
+    {
+      "predicate": {
+        "custom_model_data": 121
+      },
+      "model": "medieval-machinery:item/armor/general_boots_netherite_netherite"
+    }
+  ]
+}

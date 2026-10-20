@@ -1,0 +1,1 @@
+{"variants":{"facing=north":{"model":"medieval-machinery:block/wicker_basket"},"facing=east":{"model":"medieval-machinery:block/wicker_basket","y":90},"facing=south":{"model":"medieval-machinery:block/wicker_basket","y":180},"facing=west":{"model":"medieval-machinery:block/wicker_basket","y":270}}}

@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/block",
+  "textures": {
+    "particle": "minecraft:entity/decorated_pot/decorated_pot_side"
+  }
+}

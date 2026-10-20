@@ -1,0 +1,22 @@
+{
+  "type": "medieval-machinery:machine_workshop_shaped",
+  "group": "medieval-machinery_long_spears",
+  "pattern": [
+    "   M",
+    "  S ",
+    " S  ",
+    "S   "
+  ],
+  "key": {
+    "M": {
+      "item": "minecraft:diamond"
+    },
+    "S": {
+      "item": "minecraft:stick"
+    }
+  },
+  "result": {
+    "item": "medieval-machinery:diamond_long_spear",
+    "count": 1
+  }
+}

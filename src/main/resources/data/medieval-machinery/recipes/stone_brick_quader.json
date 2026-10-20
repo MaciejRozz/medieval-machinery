@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    "SSS",
+    "SCS",
+    "SSS"
+  ],
+  "key": {
+    "S": { "item": "minecraft:stone_bricks" },
+    "C": { "item": "minecraft:clay_ball" }
+  },
+  "result": {
+    "item": "medieval-machinery:stone_brick_quader",
+    "count": 8
+  },
+  "show_notification": true
+}

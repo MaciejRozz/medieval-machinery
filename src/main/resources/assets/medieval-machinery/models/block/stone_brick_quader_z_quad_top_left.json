@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "medieval-machinery:block/stone_brick_quader_quad_top_left"
+  }
+}

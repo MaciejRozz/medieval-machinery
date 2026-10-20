@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "medieval-machinery:item/potion_payload_3d",
+    "particle": "medieval-machinery:item/potion_payload_3d"
+  }
+}

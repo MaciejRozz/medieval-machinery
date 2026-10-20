@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "count=1": {
+      "model": "medieval-machinery:block/potion_payload_particle"
+    },
+    "count=2": {
+      "model": "medieval-machinery:block/potion_payload_particle"
+    },
+    "count=3": {
+      "model": "medieval-machinery:block/potion_payload_particle"
+    }
+  }
+}

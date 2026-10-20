@@ -1,0 +1,6 @@
+{
+  "parent":"minecraft:recipes/root",
+  "criteria":{"has_wheel":{"trigger":"minecraft:inventory_changed","conditions":{"items":[{"items":["medieval-machinery:wheel"]}]}}},
+  "requirements":[["has_wheel"]],
+  "rewards":{"recipes":["medieval-machinery:field_cannon"]}
+}

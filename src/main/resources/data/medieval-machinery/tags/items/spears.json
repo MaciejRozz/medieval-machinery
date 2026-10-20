@@ -1,0 +1,29 @@
+{
+  "replace": false,
+  "values": [
+    "medieval-machinery:wood_winged_spear",
+    "medieval-machinery:stone_winged_spear",
+    "medieval-machinery:copper_winged_spear",
+    "medieval-machinery:iron_winged_spear",
+    "medieval-machinery:diamond_winged_spear",
+    "medieval-machinery:netherite_winged_spear",
+    "medieval-machinery:wood_war_spear",
+    "medieval-machinery:stone_war_spear",
+    "medieval-machinery:copper_war_spear",
+    "medieval-machinery:iron_war_spear",
+    "medieval-machinery:diamond_war_spear",
+    "medieval-machinery:netherite_war_spear",
+    "medieval-machinery:wood_guard_spear",
+    "medieval-machinery:stone_guard_spear",
+    "medieval-machinery:copper_guard_spear",
+    "medieval-machinery:iron_guard_spear",
+    "medieval-machinery:diamond_guard_spear",
+    "medieval-machinery:netherite_guard_spear",
+    "medieval-machinery:wood_long_spear",
+    "medieval-machinery:stone_long_spear",
+    "medieval-machinery:copper_long_spear",
+    "medieval-machinery:iron_long_spear",
+    "medieval-machinery:diamond_long_spear",
+    "medieval-machinery:netherite_long_spear"
+  ]
+}

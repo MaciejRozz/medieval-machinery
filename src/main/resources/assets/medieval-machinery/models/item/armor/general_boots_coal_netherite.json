@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "medieval-machinery:item/armor/general/boots_coal_netherite"
+  }
+}

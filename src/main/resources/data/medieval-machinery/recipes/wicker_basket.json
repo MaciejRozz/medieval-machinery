@@ -1,0 +1,7 @@
+{
+  "type":"minecraft:crafting_shaped",
+  "category":"decorations",
+  "pattern":["B B","B B","BBB"],
+  "key":{"B":{"item":"minecraft:bamboo"}},
+  "result":{"item":"medieval-machinery:wicker_basket","count":1}
+}

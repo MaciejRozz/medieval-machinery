@@ -1,0 +1,25 @@
+{
+  "required": true,
+  "package": "com.medievalmachinery.mod.mixin.client",
+  "compatibilityLevel": "JAVA_17",
+  "client": [
+    "CameraMixin",
+    "ClientWorldMixin",
+    "MouseMixin",
+    "BasketCarryPoseMixin",
+    "BasketFirstPersonMixin",
+    "BasketHeldItemFeatureMixin",
+    "MachineUseBlockMixin",
+    "MachineStandingPoseMixin",
+    "PatrolEditUseMixin",
+    "PatrolEditKeyboardMixin",
+    "SpearAttackMixin",
+    "SpearFirstPersonMixin",
+    "SpearHeldItemFeatureMixin",
+    "SpearPoseMixin",
+    "RecipeOverlayScreenMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

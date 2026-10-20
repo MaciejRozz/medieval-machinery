@@ -1,0 +1,24 @@
+{
+  "required": true,
+  "package": "com.medievalmachinery.mod.mixin",
+  "compatibilityLevel": "JAVA_17",
+  "mixins": [
+    "PlayerBasketCarryMixin",
+    "SlotMixin",
+    "CraftingResultSlotAccessor",
+    "CreeperSoldierRetaliationMixin",
+    "MobEntitySoldierTargetMixin",
+    "MedievalMountHorseInteractionMixin",
+    "OrderSigilStackingMixin",
+    "PlayerSpearDamageMixin",
+    "LivingEntityOrderArmorBonusMixin",
+    "PersistentProjectileOrderArmorBonusMixin",
+    "SoldierCombatExperienceMixin",
+    "RoyalSmelterBlastFurnaceTypeMixin",
+    "RoyalArmorerVillagerOrderMixin",
+    "RoyalSmelterNameMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

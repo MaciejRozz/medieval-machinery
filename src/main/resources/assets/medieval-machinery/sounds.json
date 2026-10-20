@@ -1,0 +1,12 @@
+{
+  "crow_execution": {
+    "subtitle": "subtitles.medieval-machinery.crow_execution",
+    "sounds": [
+      {
+        "name": "medieval-machinery:crow_execution",
+        "stream": false,
+        "volume": 1.0
+      }
+    ]
+  }
+}

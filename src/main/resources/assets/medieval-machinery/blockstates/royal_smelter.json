@@ -1,0 +1,364 @@
+{
+  "variants": {
+    "facing=north,lit=false,order=0": {
+      "model": "medieval-machinery:block/royal_smelter_none"
+    },
+    "facing=east,lit=false,order=0": {
+      "model": "medieval-machinery:block/royal_smelter_none",
+      "y": 90
+    },
+    "facing=south,lit=false,order=0": {
+      "model": "medieval-machinery:block/royal_smelter_none",
+      "y": 180
+    },
+    "facing=west,lit=false,order=0": {
+      "model": "medieval-machinery:block/royal_smelter_none",
+      "y": 270
+    },
+    "facing=north,lit=true,order=0": {
+      "model": "medieval-machinery:block/royal_smelter_none_on"
+    },
+    "facing=east,lit=true,order=0": {
+      "model": "medieval-machinery:block/royal_smelter_none_on",
+      "y": 90
+    },
+    "facing=south,lit=true,order=0": {
+      "model": "medieval-machinery:block/royal_smelter_none_on",
+      "y": 180
+    },
+    "facing=west,lit=true,order=0": {
+      "model": "medieval-machinery:block/royal_smelter_none_on",
+      "y": 270
+    },
+    "facing=north,lit=false,order=1": {
+      "model": "medieval-machinery:block/royal_smelter_gold"
+    },
+    "facing=east,lit=false,order=1": {
+      "model": "medieval-machinery:block/royal_smelter_gold",
+      "y": 90
+    },
+    "facing=south,lit=false,order=1": {
+      "model": "medieval-machinery:block/royal_smelter_gold",
+      "y": 180
+    },
+    "facing=west,lit=false,order=1": {
+      "model": "medieval-machinery:block/royal_smelter_gold",
+      "y": 270
+    },
+    "facing=north,lit=true,order=1": {
+      "model": "medieval-machinery:block/royal_smelter_gold_on"
+    },
+    "facing=east,lit=true,order=1": {
+      "model": "medieval-machinery:block/royal_smelter_gold_on",
+      "y": 90
+    },
+    "facing=south,lit=true,order=1": {
+      "model": "medieval-machinery:block/royal_smelter_gold_on",
+      "y": 180
+    },
+    "facing=west,lit=true,order=1": {
+      "model": "medieval-machinery:block/royal_smelter_gold_on",
+      "y": 270
+    },
+    "facing=north,lit=false,order=2": {
+      "model": "medieval-machinery:block/royal_smelter_copper"
+    },
+    "facing=east,lit=false,order=2": {
+      "model": "medieval-machinery:block/royal_smelter_copper",
+      "y": 90
+    },
+    "facing=south,lit=false,order=2": {
+      "model": "medieval-machinery:block/royal_smelter_copper",
+      "y": 180
+    },
+    "facing=west,lit=false,order=2": {
+      "model": "medieval-machinery:block/royal_smelter_copper",
+      "y": 270
+    },
+    "facing=north,lit=true,order=2": {
+      "model": "medieval-machinery:block/royal_smelter_copper_on"
+    },
+    "facing=east,lit=true,order=2": {
+      "model": "medieval-machinery:block/royal_smelter_copper_on",
+      "y": 90
+    },
+    "facing=south,lit=true,order=2": {
+      "model": "medieval-machinery:block/royal_smelter_copper_on",
+      "y": 180
+    },
+    "facing=west,lit=true,order=2": {
+      "model": "medieval-machinery:block/royal_smelter_copper_on",
+      "y": 270
+    },
+    "facing=north,lit=false,order=3": {
+      "model": "medieval-machinery:block/royal_smelter_iron"
+    },
+    "facing=east,lit=false,order=3": {
+      "model": "medieval-machinery:block/royal_smelter_iron",
+      "y": 90
+    },
+    "facing=south,lit=false,order=3": {
+      "model": "medieval-machinery:block/royal_smelter_iron",
+      "y": 180
+    },
+    "facing=west,lit=false,order=3": {
+      "model": "medieval-machinery:block/royal_smelter_iron",
+      "y": 270
+    },
+    "facing=north,lit=true,order=3": {
+      "model": "medieval-machinery:block/royal_smelter_iron_on"
+    },
+    "facing=east,lit=true,order=3": {
+      "model": "medieval-machinery:block/royal_smelter_iron_on",
+      "y": 90
+    },
+    "facing=south,lit=true,order=3": {
+      "model": "medieval-machinery:block/royal_smelter_iron_on",
+      "y": 180
+    },
+    "facing=west,lit=true,order=3": {
+      "model": "medieval-machinery:block/royal_smelter_iron_on",
+      "y": 270
+    },
+    "facing=north,lit=false,order=4": {
+      "model": "medieval-machinery:block/royal_smelter_diamond"
+    },
+    "facing=east,lit=false,order=4": {
+      "model": "medieval-machinery:block/royal_smelter_diamond",
+      "y": 90
+    },
+    "facing=south,lit=false,order=4": {
+      "model": "medieval-machinery:block/royal_smelter_diamond",
+      "y": 180
+    },
+    "facing=west,lit=false,order=4": {
+      "model": "medieval-machinery:block/royal_smelter_diamond",
+      "y": 270
+    },
+    "facing=north,lit=true,order=4": {
+      "model": "medieval-machinery:block/royal_smelter_diamond_on"
+    },
+    "facing=east,lit=true,order=4": {
+      "model": "medieval-machinery:block/royal_smelter_diamond_on",
+      "y": 90
+    },
+    "facing=south,lit=true,order=4": {
+      "model": "medieval-machinery:block/royal_smelter_diamond_on",
+      "y": 180
+    },
+    "facing=west,lit=true,order=4": {
+      "model": "medieval-machinery:block/royal_smelter_diamond_on",
+      "y": 270
+    },
+    "facing=north,lit=false,order=5": {
+      "model": "medieval-machinery:block/royal_smelter_redstone"
+    },
+    "facing=east,lit=false,order=5": {
+      "model": "medieval-machinery:block/royal_smelter_redstone",
+      "y": 90
+    },
+    "facing=south,lit=false,order=5": {
+      "model": "medieval-machinery:block/royal_smelter_redstone",
+      "y": 180
+    },
+    "facing=west,lit=false,order=5": {
+      "model": "medieval-machinery:block/royal_smelter_redstone",
+      "y": 270
+    },
+    "facing=north,lit=true,order=5": {
+      "model": "medieval-machinery:block/royal_smelter_redstone_on"
+    },
+    "facing=east,lit=true,order=5": {
+      "model": "medieval-machinery:block/royal_smelter_redstone_on",
+      "y": 90
+    },
+    "facing=south,lit=true,order=5": {
+      "model": "medieval-machinery:block/royal_smelter_redstone_on",
+      "y": 180
+    },
+    "facing=west,lit=true,order=5": {
+      "model": "medieval-machinery:block/royal_smelter_redstone_on",
+      "y": 270
+    },
+    "facing=north,lit=false,order=6": {
+      "model": "medieval-machinery:block/royal_smelter_amethyst"
+    },
+    "facing=east,lit=false,order=6": {
+      "model": "medieval-machinery:block/royal_smelter_amethyst",
+      "y": 90
+    },
+    "facing=south,lit=false,order=6": {
+      "model": "medieval-machinery:block/royal_smelter_amethyst",
+      "y": 180
+    },
+    "facing=west,lit=false,order=6": {
+      "model": "medieval-machinery:block/royal_smelter_amethyst",
+      "y": 270
+    },
+    "facing=north,lit=true,order=6": {
+      "model": "medieval-machinery:block/royal_smelter_amethyst_on"
+    },
+    "facing=east,lit=true,order=6": {
+      "model": "medieval-machinery:block/royal_smelter_amethyst_on",
+      "y": 90
+    },
+    "facing=south,lit=true,order=6": {
+      "model": "medieval-machinery:block/royal_smelter_amethyst_on",
+      "y": 180
+    },
+    "facing=west,lit=true,order=6": {
+      "model": "medieval-machinery:block/royal_smelter_amethyst_on",
+      "y": 270
+    },
+    "facing=north,lit=false,order=7": {
+      "model": "medieval-machinery:block/royal_smelter_lapis"
+    },
+    "facing=east,lit=false,order=7": {
+      "model": "medieval-machinery:block/royal_smelter_lapis",
+      "y": 90
+    },
+    "facing=south,lit=false,order=7": {
+      "model": "medieval-machinery:block/royal_smelter_lapis",
+      "y": 180
+    },
+    "facing=west,lit=false,order=7": {
+      "model": "medieval-machinery:block/royal_smelter_lapis",
+      "y": 270
+    },
+    "facing=north,lit=true,order=7": {
+      "model": "medieval-machinery:block/royal_smelter_lapis_on"
+    },
+    "facing=east,lit=true,order=7": {
+      "model": "medieval-machinery:block/royal_smelter_lapis_on",
+      "y": 90
+    },
+    "facing=south,lit=true,order=7": {
+      "model": "medieval-machinery:block/royal_smelter_lapis_on",
+      "y": 180
+    },
+    "facing=west,lit=true,order=7": {
+      "model": "medieval-machinery:block/royal_smelter_lapis_on",
+      "y": 270
+    },
+    "facing=north,lit=false,order=8": {
+      "model": "medieval-machinery:block/royal_smelter_emerald"
+    },
+    "facing=east,lit=false,order=8": {
+      "model": "medieval-machinery:block/royal_smelter_emerald",
+      "y": 90
+    },
+    "facing=south,lit=false,order=8": {
+      "model": "medieval-machinery:block/royal_smelter_emerald",
+      "y": 180
+    },
+    "facing=west,lit=false,order=8": {
+      "model": "medieval-machinery:block/royal_smelter_emerald",
+      "y": 270
+    },
+    "facing=north,lit=true,order=8": {
+      "model": "medieval-machinery:block/royal_smelter_emerald_on"
+    },
+    "facing=east,lit=true,order=8": {
+      "model": "medieval-machinery:block/royal_smelter_emerald_on",
+      "y": 90
+    },
+    "facing=south,lit=true,order=8": {
+      "model": "medieval-machinery:block/royal_smelter_emerald_on",
+      "y": 180
+    },
+    "facing=west,lit=true,order=8": {
+      "model": "medieval-machinery:block/royal_smelter_emerald_on",
+      "y": 270
+    },
+    "facing=north,lit=false,order=9": {
+      "model": "medieval-machinery:block/royal_smelter_quartz"
+    },
+    "facing=east,lit=false,order=9": {
+      "model": "medieval-machinery:block/royal_smelter_quartz",
+      "y": 90
+    },
+    "facing=south,lit=false,order=9": {
+      "model": "medieval-machinery:block/royal_smelter_quartz",
+      "y": 180
+    },
+    "facing=west,lit=false,order=9": {
+      "model": "medieval-machinery:block/royal_smelter_quartz",
+      "y": 270
+    },
+    "facing=north,lit=true,order=9": {
+      "model": "medieval-machinery:block/royal_smelter_quartz_on"
+    },
+    "facing=east,lit=true,order=9": {
+      "model": "medieval-machinery:block/royal_smelter_quartz_on",
+      "y": 90
+    },
+    "facing=south,lit=true,order=9": {
+      "model": "medieval-machinery:block/royal_smelter_quartz_on",
+      "y": 180
+    },
+    "facing=west,lit=true,order=9": {
+      "model": "medieval-machinery:block/royal_smelter_quartz_on",
+      "y": 270
+    },
+    "facing=north,lit=false,order=10": {
+      "model": "medieval-machinery:block/royal_smelter_coal"
+    },
+    "facing=east,lit=false,order=10": {
+      "model": "medieval-machinery:block/royal_smelter_coal",
+      "y": 90
+    },
+    "facing=south,lit=false,order=10": {
+      "model": "medieval-machinery:block/royal_smelter_coal",
+      "y": 180
+    },
+    "facing=west,lit=false,order=10": {
+      "model": "medieval-machinery:block/royal_smelter_coal",
+      "y": 270
+    },
+    "facing=north,lit=true,order=10": {
+      "model": "medieval-machinery:block/royal_smelter_coal_on"
+    },
+    "facing=east,lit=true,order=10": {
+      "model": "medieval-machinery:block/royal_smelter_coal_on",
+      "y": 90
+    },
+    "facing=south,lit=true,order=10": {
+      "model": "medieval-machinery:block/royal_smelter_coal_on",
+      "y": 180
+    },
+    "facing=west,lit=true,order=10": {
+      "model": "medieval-machinery:block/royal_smelter_coal_on",
+      "y": 270
+    },
+    "facing=north,lit=false,order=11": {
+      "model": "medieval-machinery:block/royal_smelter_netherite"
+    },
+    "facing=east,lit=false,order=11": {
+      "model": "medieval-machinery:block/royal_smelter_netherite",
+      "y": 90
+    },
+    "facing=south,lit=false,order=11": {
+      "model": "medieval-machinery:block/royal_smelter_netherite",
+      "y": 180
+    },
+    "facing=west,lit=false,order=11": {
+      "model": "medieval-machinery:block/royal_smelter_netherite",
+      "y": 270
+    },
+    "facing=north,lit=true,order=11": {
+      "model": "medieval-machinery:block/royal_smelter_netherite_on"
+    },
+    "facing=east,lit=true,order=11": {
+      "model": "medieval-machinery:block/royal_smelter_netherite_on",
+      "y": 90
+    },
+    "facing=south,lit=true,order=11": {
+      "model": "medieval-machinery:block/royal_smelter_netherite_on",
+      "y": 180
+    },
+    "facing=west,lit=true,order=11": {
+      "model": "medieval-machinery:block/royal_smelter_netherite_on",
+      "y": 270
+    }
+  }
+}

@@ -1,0 +1,63 @@
+/*
+ * Decompiled with CFR 0.152.
+ * 
+ * Could not load the following classes:
+ *  net.fabricmc.api.EnvType
+ *  net.fabricmc.api.Environment
+ *  net.fabricmc.fabric.api.client.rendering.v1.BuiltinItemRendererRegistry
+ *  net.minecraft.class_1799
+ *  net.minecraft.class_1935
+ *  net.minecraft.class_2338
+ *  net.minecraft.class_4587
+ *  net.minecraft.class_4597
+ *  net.minecraft.class_7833
+ *  net.minecraft.class_811
+ */
+package com.medievalmachinery.mod.client.wheel;
+
+import com.medievalmachinery.mod.block.WheelBlockEntity;
+import com.medievalmachinery.mod.client.render.RenderTransforms;
+import com.medievalmachinery.mod.client.wheel.WheelRenderer;
+import com.medievalmachinery.mod.registry.ModBlocks;
+import net.fabricmc.api.EnvType;
+import net.fabricmc.api.Environment;
+import net.fabricmc.fabric.api.client.rendering.v1.BuiltinItemRendererRegistry;
+import net.minecraft.class_1799;
+import net.minecraft.class_1935;
+import net.minecraft.class_2338;
+import net.minecraft.class_4587;
+import net.minecraft.class_4597;
+import net.minecraft.class_7833;
+import net.minecraft.class_811;
+
+@Environment(value=EnvType.CLIENT)
+public final class WheelBuiltinItemRenderer {
+    private static final WheelRenderer RENDERER = new WheelRenderer();
+    private static final WheelBlockEntity PREVIEW = new WheelBlockEntity(class_2338.field_10980, ModBlocks.WHEEL.method_9564());
+
+    private WheelBuiltinItemRenderer() {
+    }
+
+    public static void register() {
+        BuiltinItemRendererRegistry.INSTANCE.register((class_1935)ModBlocks.WHEEL.method_8389(), WheelBuiltinItemRenderer::render);
+    }
+
+    private static void render(class_1799 stack, class_811 mode, class_4587 matrices, class_4597 consumers, int light, int overlay) {
+        RenderTransforms.Transform transform = switch (mode) {
+            case class_811.field_4317 -> RenderTransforms.wheelGui();
+            case class_811.field_4319 -> RenderTransforms.wheelFixed();
+            case class_811.field_4321, class_811.field_4322 -> RenderTransforms.wheelFirstPerson();
+            case class_811.field_4323, class_811.field_4320 -> RenderTransforms.wheelThirdPerson();
+            default -> RenderTransforms.wheelGroundItem();
+        };
+        matrices.method_22903();
+        matrices.method_22904(transform.translationX, transform.translationY, transform.translationZ);
+        matrices.method_22907(class_7833.field_40714.rotationDegrees(transform.rotationX));
+        matrices.method_22907(class_7833.field_40716.rotationDegrees(transform.rotationY));
+        matrices.method_22907(class_7833.field_40718.rotationDegrees(transform.rotationZ));
+        matrices.method_22905(transform.scale, transform.scale, transform.scale);
+        RENDERER.render(PREVIEW, 0.0f, matrices, consumers, light, overlay);
+        matrices.method_22909();
+    }
+}
+

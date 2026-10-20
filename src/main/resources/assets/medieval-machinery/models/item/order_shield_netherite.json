@@ -1,0 +1,11 @@
+{
+  "parent": "minecraft:item/shield",
+  "overrides": [
+    {
+      "predicate": {
+        "blocking": 1
+      },
+      "model": "medieval-machinery:item/order_shield_netherite_blocking"
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [" S ","SIS"," S "],
+  "key": {"S":{"item":"minecraft:stick"},"I":{"item":"minecraft:iron_ingot"}},
+  "result": {"item":"medieval-machinery:wheel","count":1}
+}

@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "facing=north": { "model": "medieval-machinery:block/royal_guillotine" },
+    "facing=east":  { "model": "medieval-machinery:block/royal_guillotine", "y": 90 },
+    "facing=south": { "model": "medieval-machinery:block/royal_guillotine", "y": 180 },
+    "facing=west":  { "model": "medieval-machinery:block/royal_guillotine", "y": 270 }
+  }
+}

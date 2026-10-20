@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "medieval-machinery:item/armor/general/chestplate_diamond_normal"
+  }
+}

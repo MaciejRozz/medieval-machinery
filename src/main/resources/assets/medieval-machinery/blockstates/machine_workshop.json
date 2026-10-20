@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "medieval-machinery:block/machine_workshop"
+    },
+    "facing=east": {
+      "model": "medieval-machinery:block/machine_workshop",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "medieval-machinery:block/machine_workshop",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "medieval-machinery:block/machine_workshop",
+      "y": 270
+    }
+  }
+}

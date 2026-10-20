@@ -1,0 +1,22 @@
+{
+  "type": "medieval-machinery:machine_workshop_shaped",
+  "group": "medieval-machinery_guard_spears",
+  "pattern": [
+    " M  ",
+    " M  ",
+    " S  ",
+    " S  "
+  ],
+  "key": {
+    "M": {
+      "item": "minecraft:iron_ingot"
+    },
+    "S": {
+      "item": "minecraft:stick"
+    }
+  },
+  "result": {
+    "item": "medieval-machinery:iron_guard_spear",
+    "count": 1
+  }
+}

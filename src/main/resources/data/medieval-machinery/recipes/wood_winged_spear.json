@@ -1,0 +1,22 @@
+{
+  "type": "medieval-machinery:machine_workshop_shaped",
+  "group": "medieval-machinery_winged_spears",
+  "pattern": [
+    "   M",
+    "  M ",
+    " S  ",
+    "S   "
+  ],
+  "key": {
+    "M": {
+      "tag": "minecraft:planks"
+    },
+    "S": {
+      "item": "minecraft:stick"
+    }
+  },
+  "result": {
+    "item": "medieval-machinery:wood_winged_spear",
+    "count": 1
+  }
+}

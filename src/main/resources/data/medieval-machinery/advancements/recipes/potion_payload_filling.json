@@ -1,0 +1,42 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_payload": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "medieval-machinery:potion_payload"
+            ]
+          }
+        ]
+      }
+    },
+    "has_potion": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:potion"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_payload"
+    ],
+    [
+      "has_potion"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "medieval-machinery:potion_payload_filling"
+    ]
+  }
+}

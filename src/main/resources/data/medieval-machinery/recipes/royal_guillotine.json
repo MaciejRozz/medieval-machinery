@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "FLF",
+    "FIF",
+    "PPP"
+  ],
+  "key": {
+    "F": { "item": "minecraft:oak_fence" },
+    "L": { "item": "minecraft:lead" },
+    "I": { "item": "minecraft:iron_ingot" },
+    "P": { "item": "minecraft:oak_planks" }
+  },
+  "result": {
+    "item": "medieval-machinery:royal_guillotine",
+    "count": 1
+  }
+}

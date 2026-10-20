@@ -1,0 +1,364 @@
+{
+  "variants": {
+    "facing=north,order=none,part=main": {
+      "model": "medieval-machinery:block/watchpost_main_none"
+    },
+    "facing=north,order=gold,part=main": {
+      "model": "medieval-machinery:block/watchpost_main_gold"
+    },
+    "facing=north,order=copper,part=main": {
+      "model": "medieval-machinery:block/watchpost_main_copper"
+    },
+    "facing=north,order=iron,part=main": {
+      "model": "medieval-machinery:block/watchpost_main_iron"
+    },
+    "facing=north,order=diamond,part=main": {
+      "model": "medieval-machinery:block/watchpost_main_diamond"
+    },
+    "facing=north,order=redstone,part=main": {
+      "model": "medieval-machinery:block/watchpost_main_redstone"
+    },
+    "facing=north,order=amethyst,part=main": {
+      "model": "medieval-machinery:block/watchpost_main_amethyst"
+    },
+    "facing=north,order=lapis,part=main": {
+      "model": "medieval-machinery:block/watchpost_main_lapis"
+    },
+    "facing=north,order=emerald,part=main": {
+      "model": "medieval-machinery:block/watchpost_main_emerald"
+    },
+    "facing=north,order=quartz,part=main": {
+      "model": "medieval-machinery:block/watchpost_main_quartz"
+    },
+    "facing=north,order=coal,part=main": {
+      "model": "medieval-machinery:block/watchpost_main_coal"
+    },
+    "facing=north,order=netherite,part=main": {
+      "model": "medieval-machinery:block/watchpost_main_netherite"
+    },
+    "facing=north,order=none,part=extension": {
+      "model": "medieval-machinery:block/watchpost_extension_none"
+    },
+    "facing=north,order=gold,part=extension": {
+      "model": "medieval-machinery:block/watchpost_extension_gold"
+    },
+    "facing=north,order=copper,part=extension": {
+      "model": "medieval-machinery:block/watchpost_extension_copper"
+    },
+    "facing=north,order=iron,part=extension": {
+      "model": "medieval-machinery:block/watchpost_extension_iron"
+    },
+    "facing=north,order=diamond,part=extension": {
+      "model": "medieval-machinery:block/watchpost_extension_diamond"
+    },
+    "facing=north,order=redstone,part=extension": {
+      "model": "medieval-machinery:block/watchpost_extension_redstone"
+    },
+    "facing=north,order=amethyst,part=extension": {
+      "model": "medieval-machinery:block/watchpost_extension_amethyst"
+    },
+    "facing=north,order=lapis,part=extension": {
+      "model": "medieval-machinery:block/watchpost_extension_lapis"
+    },
+    "facing=north,order=emerald,part=extension": {
+      "model": "medieval-machinery:block/watchpost_extension_emerald"
+    },
+    "facing=north,order=quartz,part=extension": {
+      "model": "medieval-machinery:block/watchpost_extension_quartz"
+    },
+    "facing=north,order=coal,part=extension": {
+      "model": "medieval-machinery:block/watchpost_extension_coal"
+    },
+    "facing=north,order=netherite,part=extension": {
+      "model": "medieval-machinery:block/watchpost_extension_netherite"
+    },
+    "facing=east,order=none,part=main": {
+      "model": "medieval-machinery:block/watchpost_main_none",
+      "y": 90
+    },
+    "facing=east,order=gold,part=main": {
+      "model": "medieval-machinery:block/watchpost_main_gold",
+      "y": 90
+    },
+    "facing=east,order=copper,part=main": {
+      "model": "medieval-machinery:block/watchpost_main_copper",
+      "y": 90
+    },
+    "facing=east,order=iron,part=main": {
+      "model": "medieval-machinery:block/watchpost_main_iron",
+      "y": 90
+    },
+    "facing=east,order=diamond,part=main": {
+      "model": "medieval-machinery:block/watchpost_main_diamond",
+      "y": 90
+    },
+    "facing=east,order=redstone,part=main": {
+      "model": "medieval-machinery:block/watchpost_main_redstone",
+      "y": 90
+    },
+    "facing=east,order=amethyst,part=main": {
+      "model": "medieval-machinery:block/watchpost_main_amethyst",
+      "y": 90
+    },
+    "facing=east,order=lapis,part=main": {
+      "model": "medieval-machinery:block/watchpost_main_lapis",
+      "y": 90
+    },
+    "facing=east,order=emerald,part=main": {
+      "model": "medieval-machinery:block/watchpost_main_emerald",
+      "y": 90
+    },
+    "facing=east,order=quartz,part=main": {
+      "model": "medieval-machinery:block/watchpost_main_quartz",
+      "y": 90
+    },
+    "facing=east,order=coal,part=main": {
+      "model": "medieval-machinery:block/watchpost_main_coal",
+      "y": 90
+    },
+    "facing=east,order=netherite,part=main": {
+      "model": "medieval-machinery:block/watchpost_main_netherite",
+      "y": 90
+    },
+    "facing=east,order=none,part=extension": {
+      "model": "medieval-machinery:block/watchpost_extension_none",
+      "y": 90
+    },
+    "facing=east,order=gold,part=extension": {
+      "model": "medieval-machinery:block/watchpost_extension_gold",
+      "y": 90
+    },
+    "facing=east,order=copper,part=extension": {
+      "model": "medieval-machinery:block/watchpost_extension_copper",
+      "y": 90
+    },
+    "facing=east,order=iron,part=extension": {
+      "model": "medieval-machinery:block/watchpost_extension_iron",
+      "y": 90
+    },
+    "facing=east,order=diamond,part=extension": {
+      "model": "medieval-machinery:block/watchpost_extension_diamond",
+      "y": 90
+    },
+    "facing=east,order=redstone,part=extension": {
+      "model": "medieval-machinery:block/watchpost_extension_redstone",
+      "y": 90
+    },
+    "facing=east,order=amethyst,part=extension": {
+      "model": "medieval-machinery:block/watchpost_extension_amethyst",
+      "y": 90
+    },
+    "facing=east,order=lapis,part=extension": {
+      "model": "medieval-machinery:block/watchpost_extension_lapis",
+      "y": 90
+    },
+    "facing=east,order=emerald,part=extension": {
+      "model": "medieval-machinery:block/watchpost_extension_emerald",
+      "y": 90
+    },
+    "facing=east,order=quartz,part=extension": {
+      "model": "medieval-machinery:block/watchpost_extension_quartz",
+      "y": 90
+    },
+    "facing=east,order=coal,part=extension": {
+      "model": "medieval-machinery:block/watchpost_extension_coal",
+      "y": 90
+    },
+    "facing=east,order=netherite,part=extension": {
+      "model": "medieval-machinery:block/watchpost_extension_netherite",
+      "y": 90
+    },
+    "facing=south,order=none,part=main": {
+      "model": "medieval-machinery:block/watchpost_main_none",
+      "y": 180
+    },
+    "facing=south,order=gold,part=main": {
+      "model": "medieval-machinery:block/watchpost_main_gold",
+      "y": 180
+    },
+    "facing=south,order=copper,part=main": {
+      "model": "medieval-machinery:block/watchpost_main_copper",
+      "y": 180
+    },
+    "facing=south,order=iron,part=main": {
+      "model": "medieval-machinery:block/watchpost_main_iron",
+      "y": 180
+    },
+    "facing=south,order=diamond,part=main": {
+      "model": "medieval-machinery:block/watchpost_main_diamond",
+      "y": 180
+    },
+    "facing=south,order=redstone,part=main": {
+      "model": "medieval-machinery:block/watchpost_main_redstone",
+      "y": 180
+    },
+    "facing=south,order=amethyst,part=main": {
+      "model": "medieval-machinery:block/watchpost_main_amethyst",
+      "y": 180
+    },
+    "facing=south,order=lapis,part=main": {
+      "model": "medieval-machinery:block/watchpost_main_lapis",
+      "y": 180
+    },
+    "facing=south,order=emerald,part=main": {
+      "model": "medieval-machinery:block/watchpost_main_emerald",
+      "y": 180
+    },
+    "facing=south,order=quartz,part=main": {
+      "model": "medieval-machinery:block/watchpost_main_quartz",
+      "y": 180
+    },
+    "facing=south,order=coal,part=main": {
+      "model": "medieval-machinery:block/watchpost_main_coal",
+      "y": 180
+    },
+    "facing=south,order=netherite,part=main": {
+      "model": "medieval-machinery:block/watchpost_main_netherite",
+      "y": 180
+    },
+    "facing=south,order=none,part=extension": {
+      "model": "medieval-machinery:block/watchpost_extension_none",
+      "y": 180
+    },
+    "facing=south,order=gold,part=extension": {
+      "model": "medieval-machinery:block/watchpost_extension_gold",
+      "y": 180
+    },
+    "facing=south,order=copper,part=extension": {
+      "model": "medieval-machinery:block/watchpost_extension_copper",
+      "y": 180
+    },
+    "facing=south,order=iron,part=extension": {
+      "model": "medieval-machinery:block/watchpost_extension_iron",
+      "y": 180
+    },
+    "facing=south,order=diamond,part=extension": {
+      "model": "medieval-machinery:block/watchpost_extension_diamond",
+      "y": 180
+    },
+    "facing=south,order=redstone,part=extension": {
+      "model": "medieval-machinery:block/watchpost_extension_redstone",
+      "y": 180
+    },
+    "facing=south,order=amethyst,part=extension": {
+      "model": "medieval-machinery:block/watchpost_extension_amethyst",
+      "y": 180
+    },
+    "facing=south,order=lapis,part=extension": {
+      "model": "medieval-machinery:block/watchpost_extension_lapis",
+      "y": 180
+    },
+    "facing=south,order=emerald,part=extension": {
+      "model": "medieval-machinery:block/watchpost_extension_emerald",
+      "y": 180
+    },
+    "facing=south,order=quartz,part=extension": {
+      "model": "medieval-machinery:block/watchpost_extension_quartz",
+      "y": 180
+    },
+    "facing=south,order=coal,part=extension": {
+      "model": "medieval-machinery:block/watchpost_extension_coal",
+      "y": 180
+    },
+    "facing=south,order=netherite,part=extension": {
+      "model": "medieval-machinery:block/watchpost_extension_netherite",
+      "y": 180
+    },
+    "facing=west,order=none,part=main": {
+      "model": "medieval-machinery:block/watchpost_main_none",
+      "y": 270
+    },
+    "facing=west,order=gold,part=main": {
+      "model": "medieval-machinery:block/watchpost_main_gold",
+      "y": 270
+    },
+    "facing=west,order=copper,part=main": {
+      "model": "medieval-machinery:block/watchpost_main_copper",
+      "y": 270
+    },
+    "facing=west,order=iron,part=main": {
+      "model": "medieval-machinery:block/watchpost_main_iron",
+      "y": 270
+    },
+    "facing=west,order=diamond,part=main": {
+      "model": "medieval-machinery:block/watchpost_main_diamond",
+      "y": 270
+    },
+    "facing=west,order=redstone,part=main": {
+      "model": "medieval-machinery:block/watchpost_main_redstone",
+      "y": 270
+    },
+    "facing=west,order=amethyst,part=main": {
+      "model": "medieval-machinery:block/watchpost_main_amethyst",
+      "y": 270
+    },
+    "facing=west,order=lapis,part=main": {
+      "model": "medieval-machinery:block/watchpost_main_lapis",
+      "y": 270
+    },
+    "facing=west,order=emerald,part=main": {
+      "model": "medieval-machinery:block/watchpost_main_emerald",
+      "y": 270
+    },
+    "facing=west,order=quartz,part=main": {
+      "model": "medieval-machinery:block/watchpost_main_quartz",
+      "y": 270
+    },
+    "facing=west,order=coal,part=main": {
+      "model": "medieval-machinery:block/watchpost_main_coal",
+      "y": 270
+    },
+    "facing=west,order=netherite,part=main": {
+      "model": "medieval-machinery:block/watchpost_main_netherite",
+      "y": 270
+    },
+    "facing=west,order=none,part=extension": {
+      "model": "medieval-machinery:block/watchpost_extension_none",
+      "y": 270
+    },
+    "facing=west,order=gold,part=extension": {
+      "model": "medieval-machinery:block/watchpost_extension_gold",
+      "y": 270
+    },
+    "facing=west,order=copper,part=extension": {
+      "model": "medieval-machinery:block/watchpost_extension_copper",
+      "y": 270
+    },
+    "facing=west,order=iron,part=extension": {
+      "model": "medieval-machinery:block/watchpost_extension_iron",
+      "y": 270
+    },
+    "facing=west,order=diamond,part=extension": {
+      "model": "medieval-machinery:block/watchpost_extension_diamond",
+      "y": 270
+    },
+    "facing=west,order=redstone,part=extension": {
+      "model": "medieval-machinery:block/watchpost_extension_redstone",
+      "y": 270
+    },
+    "facing=west,order=amethyst,part=extension": {
+      "model": "medieval-machinery:block/watchpost_extension_amethyst",
+      "y": 270
+    },
+    "facing=west,order=lapis,part=extension": {
+      "model": "medieval-machinery:block/watchpost_extension_lapis",
+      "y": 270
+    },
+    "facing=west,order=emerald,part=extension": {
+      "model": "medieval-machinery:block/watchpost_extension_emerald",
+      "y": 270
+    },
+    "facing=west,order=quartz,part=extension": {
+      "model": "medieval-machinery:block/watchpost_extension_quartz",
+      "y": 270
+    },
+    "facing=west,order=coal,part=extension": {
+      "model": "medieval-machinery:block/watchpost_extension_coal",
+      "y": 270
+    },
+    "facing=west,order=netherite,part=extension": {
+      "model": "medieval-machinery:block/watchpost_extension_netherite",
+      "y": 270
+    }
+  }
+}

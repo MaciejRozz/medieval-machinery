@@ -1,0 +1,7 @@
+{
+  "elements": [],
+  "gui_light": "side",
+  "textures": {
+    "particle": "medieval-machinery:block/stationary_cannon"
+  }
+}

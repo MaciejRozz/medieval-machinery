@@ -1,0 +1,17 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_stone_bricks": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          { "items": ["minecraft:stone_bricks"] }
+        ]
+      }
+    }
+  },
+  "requirements": [["has_stone_bricks"]],
+  "rewards": {
+    "recipes": ["medieval-machinery:stone_brick_quader"]
+  }
+}

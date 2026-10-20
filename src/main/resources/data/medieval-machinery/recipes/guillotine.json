@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "FLF",
+    "FIF",
+    "SSS"
+  ],
+  "key": {
+    "F": { "item": "minecraft:oak_fence" },
+    "L": { "item": "minecraft:lead" },
+    "I": { "item": "minecraft:iron_ingot" },
+    "S": { "item": "minecraft:oak_slab" }
+  },
+  "result": {
+    "item": "medieval-machinery:guillotine",
+    "count": 1
+  }
+}

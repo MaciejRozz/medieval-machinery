@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "down": "medieval-machinery:block/machine_workshop_bottom",
+    "up": "medieval-machinery:block/machine_workshop_top",
+    "north": "medieval-machinery:block/machine_workshop_front",
+    "south": "medieval-machinery:block/machine_workshop_back",
+    "west": "medieval-machinery:block/machine_workshop_left",
+    "east": "medieval-machinery:block/machine_workshop_right",
+    "particle": "medieval-machinery:block/machine_workshop_front"
+  }
+}

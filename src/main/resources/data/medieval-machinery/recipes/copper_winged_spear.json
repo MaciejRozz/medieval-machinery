@@ -1,0 +1,22 @@
+{
+  "type": "medieval-machinery:machine_workshop_shaped",
+  "group": "medieval-machinery_winged_spears",
+  "pattern": [
+    "   M",
+    "  M ",
+    " S  ",
+    "S   "
+  ],
+  "key": {
+    "M": {
+      "item": "minecraft:copper_ingot"
+    },
+    "S": {
+      "item": "minecraft:stick"
+    }
+  },
+  "result": {
+    "item": "medieval-machinery:copper_winged_spear",
+    "count": 1
+  }
+}

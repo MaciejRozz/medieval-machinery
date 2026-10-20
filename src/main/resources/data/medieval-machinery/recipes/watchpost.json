@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "SMB",
+    "PPP",
+    "F F"
+  ],
+  "key": {
+    "S": {
+      "item": "minecraft:iron_sword"
+    },
+    "M": {
+      "item": "minecraft:map"
+    },
+    "B": {
+      "item": "minecraft:bow"
+    },
+    "P": {
+      "tag": "minecraft:planks"
+    },
+    "F": {
+      "tag": "medieval-machinery:machine_wooden_fences"
+    }
+  },
+  "result": {
+    "item": "medieval-machinery:watchpost",
+    "count": 1
+  }
+}

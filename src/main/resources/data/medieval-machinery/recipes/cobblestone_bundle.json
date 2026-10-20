@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "CCC",
+    "CSC",
+    "CCC"
+  ],
+  "key": {
+    "C": { "item": "minecraft:cobblestone" },
+    "S": { "item": "minecraft:string" }
+  },
+  "result": {
+    "item": "medieval-machinery:cobblestone_bundle",
+    "count": 1
+  }
+}

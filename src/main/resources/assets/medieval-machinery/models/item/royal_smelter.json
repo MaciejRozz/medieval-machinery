@@ -1,0 +1,71 @@
+{
+  "parent": "medieval-machinery:block/royal_smelter_none",
+  "overrides": [
+    {
+      "predicate": {
+        "medieval-machinery:royal_order": 1
+      },
+      "model": "medieval-machinery:block/royal_smelter_gold"
+    },
+    {
+      "predicate": {
+        "medieval-machinery:royal_order": 2
+      },
+      "model": "medieval-machinery:block/royal_smelter_copper"
+    },
+    {
+      "predicate": {
+        "medieval-machinery:royal_order": 3
+      },
+      "model": "medieval-machinery:block/royal_smelter_iron"
+    },
+    {
+      "predicate": {
+        "medieval-machinery:royal_order": 4
+      },
+      "model": "medieval-machinery:block/royal_smelter_diamond"
+    },
+    {
+      "predicate": {
+        "medieval-machinery:royal_order": 5
+      },
+      "model": "medieval-machinery:block/royal_smelter_redstone"
+    },
+    {
+      "predicate": {
+        "medieval-machinery:royal_order": 6
+      },
+      "model": "medieval-machinery:block/royal_smelter_amethyst"
+    },
+    {
+      "predicate": {
+        "medieval-machinery:royal_order": 7
+      },
+      "model": "medieval-machinery:block/royal_smelter_lapis"
+    },
+    {
+      "predicate": {
+        "medieval-machinery:royal_order": 8
+      },
+      "model": "medieval-machinery:block/royal_smelter_emerald"
+    },
+    {
+      "predicate": {
+        "medieval-machinery:royal_order": 9
+      },
+      "model": "medieval-machinery:block/royal_smelter_quartz"
+    },
+    {
+      "predicate": {
+        "medieval-machinery:royal_order": 10
+      },
+      "model": "medieval-machinery:block/royal_smelter_coal"
+    },
+    {
+      "predicate": {
+        "medieval-machinery:royal_order": 11
+      },
+      "model": "medieval-machinery:block/royal_smelter_netherite"
+    }
+  ]
+}

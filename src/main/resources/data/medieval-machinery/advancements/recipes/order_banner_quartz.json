@@ -1,0 +1,42 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_order_sigil": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "medieval-machinery:order_sigil_quartz"
+            ]
+          }
+        ]
+      }
+    },
+    "has_base_item": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:white_banner"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_order_sigil"
+    ],
+    [
+      "has_base_item"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "medieval-machinery:order_banner_quartz"
+    ]
+  }
+}

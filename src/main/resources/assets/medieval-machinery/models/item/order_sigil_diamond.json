@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "medieval-machinery:item/order_sigil_diamond"
+  }
+}

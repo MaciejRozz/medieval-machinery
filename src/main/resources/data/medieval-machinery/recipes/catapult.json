@@ -1,0 +1,40 @@
+{
+  "type": "medieval-machinery:machine_workshop_shaped",
+  "pattern": [
+    "I S ",
+    "LfF ",
+    "L5FF",
+    "PSSP"
+  ],
+  "key": {
+    "I": {
+      "item": "minecraft:iron_block"
+    },
+    "S": {
+      "tag": "medieval-machinery:machine_wooden_slabs",
+      "count": 2
+    },
+    "L": {
+      "item": "minecraft:lead"
+    },
+    "f": {
+      "tag": "medieval-machinery:machine_wooden_fences"
+    },
+    "F": {
+      "tag": "medieval-machinery:machine_wooden_fences",
+      "count": 2
+    },
+    "5": {
+      "item": "minecraft:leather",
+      "count": 5
+    },
+    "P": {
+      "tag": "medieval-machinery:machine_planks",
+      "count": 2
+    }
+  },
+  "result": {
+    "item": "medieval-machinery:catapult",
+    "count": 1
+  }
+}

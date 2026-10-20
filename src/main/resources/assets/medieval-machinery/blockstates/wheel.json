@@ -1,0 +1,28 @@
+{
+  "variants": {
+    "facing=north,placement_mode=floor": {
+      "model": "medieval-machinery:block/wheel"
+    },
+    "facing=east,placement_mode=floor": {
+      "model": "medieval-machinery:block/wheel"
+    },
+    "facing=south,placement_mode=floor": {
+      "model": "medieval-machinery:block/wheel"
+    },
+    "facing=west,placement_mode=floor": {
+      "model": "medieval-machinery:block/wheel"
+    },
+    "facing=north,placement_mode=wall": {
+      "model": "medieval-machinery:block/wheel"
+    },
+    "facing=east,placement_mode=wall": {
+      "model": "medieval-machinery:block/wheel"
+    },
+    "facing=south,placement_mode=wall": {
+      "model": "medieval-machinery:block/wheel"
+    },
+    "facing=west,placement_mode=wall": {
+      "model": "medieval-machinery:block/wheel"
+    }
+  }
+}

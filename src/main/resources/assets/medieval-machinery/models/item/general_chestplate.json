@@ -1,0 +1,140 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "minecraft:item/diamond_chestplate"
+  },
+  "overrides": [
+    {
+      "predicate": {
+        "custom_model_data": 100
+      },
+      "model": "medieval-machinery:item/armor/general_chestplate_gold_normal"
+    },
+    {
+      "predicate": {
+        "custom_model_data": 101
+      },
+      "model": "medieval-machinery:item/armor/general_chestplate_gold_netherite"
+    },
+    {
+      "predicate": {
+        "custom_model_data": 102
+      },
+      "model": "medieval-machinery:item/armor/general_chestplate_copper_normal"
+    },
+    {
+      "predicate": {
+        "custom_model_data": 103
+      },
+      "model": "medieval-machinery:item/armor/general_chestplate_copper_netherite"
+    },
+    {
+      "predicate": {
+        "custom_model_data": 104
+      },
+      "model": "medieval-machinery:item/armor/general_chestplate_iron_normal"
+    },
+    {
+      "predicate": {
+        "custom_model_data": 105
+      },
+      "model": "medieval-machinery:item/armor/general_chestplate_iron_netherite"
+    },
+    {
+      "predicate": {
+        "custom_model_data": 106
+      },
+      "model": "medieval-machinery:item/armor/general_chestplate_diamond_normal"
+    },
+    {
+      "predicate": {
+        "custom_model_data": 107
+      },
+      "model": "medieval-machinery:item/armor/general_chestplate_diamond_netherite"
+    },
+    {
+      "predicate": {
+        "custom_model_data": 108
+      },
+      "model": "medieval-machinery:item/armor/general_chestplate_redstone_normal"
+    },
+    {
+      "predicate": {
+        "custom_model_data": 109
+      },
+      "model": "medieval-machinery:item/armor/general_chestplate_redstone_netherite"
+    },
+    {
+      "predicate": {
+        "custom_model_data": 110
+      },
+      "model": "medieval-machinery:item/armor/general_chestplate_amethyst_normal"
+    },
+    {
+      "predicate": {
+        "custom_model_data": 111
+      },
+      "model": "medieval-machinery:item/armor/general_chestplate_amethyst_netherite"
+    },
+    {
+      "predicate": {
+        "custom_model_data": 112
+      },
+      "model": "medieval-machinery:item/armor/general_chestplate_lapis_normal"
+    },
+    {
+      "predicate": {
+        "custom_model_data": 113
+      },
+      "model": "medieval-machinery:item/armor/general_chestplate_lapis_netherite"
+    },
+    {
+      "predicate": {
+        "custom_model_data": 114
+      },
+      "model": "medieval-machinery:item/armor/general_chestplate_emerald_normal"
+    },
+    {
+      "predicate": {
+        "custom_model_data": 115
+      },
+      "model": "medieval-machinery:item/armor/general_chestplate_emerald_netherite"
+    },
+    {
+      "predicate": {
+        "custom_model_data": 116
+      },
+      "model": "medieval-machinery:item/armor/general_chestplate_quartz_normal"
+    },
+    {
+      "predicate": {
+        "custom_model_data": 117
+      },
+      "model": "medieval-machinery:item/armor/general_chestplate_quartz_netherite"
+    },
+    {
+      "predicate": {
+        "custom_model_data": 118
+      },
+      "model": "medieval-machinery:item/armor/general_chestplate_coal_normal"
+    },
+    {
+      "predicate": {
+        "custom_model_data": 119
+      },
+      "model": "medieval-machinery:item/armor/general_chestplate_coal_netherite"
+    },
+    {
+      "predicate": {
+        "custom_model_data": 120
+      },
+      "model": "medieval-machinery:item/armor/general_chestplate_netherite_normal"
+    },
+    {
+      "predicate": {
+        "custom_model_data": 121
+      },
+      "model": "medieval-machinery:item/armor/general_chestplate_netherite_netherite"
+    }
+  ]
+}

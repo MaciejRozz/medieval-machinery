@@ -1,0 +1,18 @@
+Summary for /opt/minecraft/data/mods/medieval-machinery-fabric-1.20.1-1.2.0.jar
+Decompiled with CFR 0.152
+
+
+com.medievalmachinery.mod.block.garrison.WatchpostBlockEntity
+----------------------------
+
+writeOpeningData(net.minecraft.class_3222 net.minecraft.class_2540 boolean )
+  Iterators could be improved
+  Unable to fully structure code
+  Could not resolve type clashes
+
+
+com.medievalmachinery.mod.npc.organization.CastleAreaService
+----------------------------
+
+containsPolygon(java.util.List<net.minecraft.class_2338> double double )
+  Unable to fully structure code

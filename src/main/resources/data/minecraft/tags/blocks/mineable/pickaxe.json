@@ -1,0 +1,11 @@
+{
+  "replace": false,
+  "values": [
+    "medieval-machinery:stationary_cannon",
+    "medieval-machinery:stone_cannonball_pile",
+    "medieval-machinery:iron_cannonball_pile",
+    "medieval-machinery:tnt_cannonball_pile",
+    "medieval-machinery:heavy_iron_cannonball_pile",
+    "medieval-machinery:stone_brick_quader"
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_medieval_armor": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "medieval-machinery:order_chestplate"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_medieval_armor"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "medieval-machinery:armor_style_cycle"
+    ]
+  }
+}

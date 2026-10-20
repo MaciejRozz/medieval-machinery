@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/block",
+  "textures": {
+    "particle": "medieval-machinery:block/royal_guillotine"
+  }
+}

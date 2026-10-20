@@ -1,0 +1,70 @@
+{
+  "variants": {
+    "axis=x,pattern=single": {
+      "model": "medieval-machinery:block/stone_brick_quader_x_single"
+    },
+    "axis=x,pattern=h_left": {
+      "model": "medieval-machinery:block/stone_brick_quader_x_h_left"
+    },
+    "axis=x,pattern=h_right": {
+      "model": "medieval-machinery:block/stone_brick_quader_x_h_right"
+    },
+    "axis=x,pattern=v_bottom": {
+      "model": "medieval-machinery:block/stone_brick_quader_x_v_bottom"
+    },
+    "axis=x,pattern=v_top": {
+      "model": "medieval-machinery:block/stone_brick_quader_x_v_top"
+    },
+    "axis=x,pattern=quad_bottom_left": {
+      "model": "medieval-machinery:block/stone_brick_quader_x_quad_bottom_left"
+    },
+    "axis=x,pattern=quad_bottom_right": {
+      "model": "medieval-machinery:block/stone_brick_quader_x_quad_bottom_right"
+    },
+    "axis=x,pattern=quad_top_left": {
+      "model": "medieval-machinery:block/stone_brick_quader_x_quad_top_left"
+    },
+    "axis=x,pattern=quad_top_right": {
+      "model": "medieval-machinery:block/stone_brick_quader_x_quad_top_right"
+    },
+    "axis=x,pattern=small_a": {
+      "model": "medieval-machinery:block/stone_brick_quader_x_small_a"
+    },
+    "axis=x,pattern=small_b": {
+      "model": "medieval-machinery:block/stone_brick_quader_x_small_b"
+    },
+    "axis=z,pattern=single": {
+      "model": "medieval-machinery:block/stone_brick_quader_z_single"
+    },
+    "axis=z,pattern=h_left": {
+      "model": "medieval-machinery:block/stone_brick_quader_z_h_left"
+    },
+    "axis=z,pattern=h_right": {
+      "model": "medieval-machinery:block/stone_brick_quader_z_h_right"
+    },
+    "axis=z,pattern=v_bottom": {
+      "model": "medieval-machinery:block/stone_brick_quader_z_v_bottom"
+    },
+    "axis=z,pattern=v_top": {
+      "model": "medieval-machinery:block/stone_brick_quader_z_v_top"
+    },
+    "axis=z,pattern=quad_bottom_left": {
+      "model": "medieval-machinery:block/stone_brick_quader_z_quad_bottom_left"
+    },
+    "axis=z,pattern=quad_bottom_right": {
+      "model": "medieval-machinery:block/stone_brick_quader_z_quad_bottom_right"
+    },
+    "axis=z,pattern=quad_top_left": {
+      "model": "medieval-machinery:block/stone_brick_quader_z_quad_top_left"
+    },
+    "axis=z,pattern=quad_top_right": {
+      "model": "medieval-machinery:block/stone_brick_quader_z_quad_top_right"
+    },
+    "axis=z,pattern=small_a": {
+      "model": "medieval-machinery:block/stone_brick_quader_z_small_a"
+    },
+    "axis=z,pattern=small_b": {
+      "model": "medieval-machinery:block/stone_brick_quader_z_small_b"
+    }
+  }
+}
