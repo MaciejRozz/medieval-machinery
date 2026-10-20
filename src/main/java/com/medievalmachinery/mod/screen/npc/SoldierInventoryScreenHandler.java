@@ -61,7 +61,7 @@ extends class_1703 {
     private final MedievalSoldierEntity soldier;
 
     public SoldierInventoryScreenHandler(int syncId, class_1661 playerInventory) {
-        this(syncId, playerInventory, null, (class_1263)new class_1277(10), (class_1263)new class_1277(6), (class_3913)new class_3919(7));
+        this(syncId, playerInventory, null, (class_1263)new class_1277(10), (class_1263)new class_1277(6), (class_3913)new class_3919(8));
     }
 
     public SoldierInventoryScreenHandler(int syncId, class_1661 playerInventory, MedievalSoldierEntity soldier) {
@@ -81,12 +81,7 @@ extends class_1703 {
         this.method_17360(properties);
         for (int i = 0; i < 4; ++i) {
             final class_1304 equipmentSlot = EQUIPMENT[i];
-            this.method_7621(new class_1735(this, equipmentInventory, i, 18, 48 + i * 18){
-                final /* synthetic */ SoldierInventoryScreenHandler this$0;
-                {
-                    this.this$0 = this$0;
-                    super(arg0, arg1, arg2, arg3);
-                }
+            this.method_7621(new class_1735(equipmentInventory, i, 18, 48 + i * 18){
 
                 public boolean method_7680(class_1799 stack) {
                     class_1738 armor;
@@ -149,7 +144,7 @@ extends class_1703 {
 
             public int method_17390(int index) {
                 return switch (index) {
-                    case 0 -> soldier.method_5628();
+                    case 0 -> soldier.method_5628() & 0xFFFF;
                     case 1 -> soldier.getNpcRole().ordinal();
                     case 2 -> soldier.getOrderType().ordinal();
                     case 3 -> soldier.getCombatStance().ordinal();
@@ -166,6 +161,7 @@ extends class_1703 {
                         yield 0;
                     }
                     case 6 -> SoldierInventoryScreenHandler.assignedMachineAmmoKind(soldier);
+                    case 7 -> (soldier.method_5628() >>> 16) & 0xFFFF;
                     default -> 0;
                 };
             }
@@ -174,7 +170,7 @@ extends class_1703 {
             }
 
             public int method_17389() {
-                return 7;
+                return 8;
             }
         };
     }
@@ -209,7 +205,9 @@ extends class_1703 {
     }
 
     public int getSoldierEntityId() {
-        return this.properties.method_17390(0);
+        int low = this.properties.method_17390(0) & 0xFFFF;
+        int high = this.properties.method_17389() > 7 ? (this.properties.method_17390(7) & 0xFFFF) : 0;
+        return (high << 16) | low;
     }
 
     public NpcRole getNpcRole() {
@@ -280,23 +278,23 @@ extends class_1703 {
                 class_1738 armor = (class_1738)class_17922;
                 switch (armor.method_7685()) {
                     case field_6169: {
-                        int n = 0;
+                        armorIndex = 0;
                         break;
                     }
                     case field_6174: {
-                        int n = 1;
+                        armorIndex = 1;
                         break;
                     }
                     case field_6172: {
-                        int n = 2;
+                        armorIndex = 2;
                         break;
                     }
                     case field_6166: {
-                        int n = 3;
+                        armorIndex = 3;
                         break;
                     }
                     default: {
-                        int n = armorIndex = -1;
+                        armorIndex = -1;
                     }
                 }
                 if (armorIndex >= 0 && !((class_1735)this.field_7761.get(armorIndex)).method_7681()) {

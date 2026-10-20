@@ -317,8 +317,6 @@ public final class GarrisonData {
      * WARNING - void declaration
      */
     public class_2487 toNbt() {
-        void var5_12;
-        void var4_8;
         class_2487 nbt = new class_2487();
         nbt.method_25927("CastleId", this.id);
         nbt.method_25927("Owner", this.ownerId);
@@ -353,14 +351,14 @@ public final class GarrisonData {
             ++supplyIndex;
         }
         nbt.method_10569("SupplyCount", supplyIndex);
-        boolean bl = false;
+        int taxIndex = 0;
         for (class_2338 taxPos : this.taxChestPositions) {
-            nbt.method_10569("TaxX" + (int)var4_8, taxPos.method_10263());
-            nbt.method_10569("TaxY" + (int)var4_8, taxPos.method_10264());
-            nbt.method_10569("TaxZ" + (int)var4_8, taxPos.method_10260());
-            ++var4_8;
+            nbt.method_10569("TaxX" + taxIndex, taxPos.method_10263());
+            nbt.method_10569("TaxY" + taxIndex, taxPos.method_10264());
+            nbt.method_10569("TaxZ" + taxIndex, taxPos.method_10260());
+            ++taxIndex;
         }
-        nbt.method_10569("TaxCount", (int)var4_8);
+        nbt.method_10569("TaxCount", taxIndex);
         nbt.method_10544("StoredTaxEmeralds", this.storedTaxEmeralds);
         nbt.method_10544("LastTaxDay", this.lastTaxDay);
         nbt.method_10544("LastWatchpostLoadedTaxDay", this.lastWatchpostLoadedTaxDay);
@@ -369,13 +367,11 @@ public final class GarrisonData {
         nbt.method_10544("TaxLastGameTime", this.taxLastGameTime);
         nbt.method_10569("LastKnownAdultVillagerCount", this.lastKnownAdultVillagerCount);
         nbt.method_10569("BoundaryPointCount", this.boundaryPoints.size());
-        boolean bl2 = false;
-        while (var5_12 < this.boundaryPoints.size()) {
-            class_2338 point = this.boundaryPoints.get((int)var5_12);
-            nbt.method_10569("BoundaryX" + (int)var5_12, point.method_10263());
-            nbt.method_10569("BoundaryY" + (int)var5_12, point.method_10264());
-            nbt.method_10569("BoundaryZ" + (int)var5_12, point.method_10260());
-            ++var5_12;
+        for (int boundaryIndex = 0; boundaryIndex < this.boundaryPoints.size(); ++boundaryIndex) {
+            class_2338 point = this.boundaryPoints.get(boundaryIndex);
+            nbt.method_10569("BoundaryX" + boundaryIndex, point.method_10263());
+            nbt.method_10569("BoundaryY" + boundaryIndex, point.method_10264());
+            nbt.method_10569("BoundaryZ" + boundaryIndex, point.method_10260());
         }
         class_2487 class_24872 = new class_2487();
         int censusIndex = 0;

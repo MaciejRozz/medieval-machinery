@@ -48,6 +48,7 @@ import com.medievalmachinery.mod.npc.organization.NpcSupplyCommandService;
 import com.medievalmachinery.mod.npc.organization.SoldierControlPolicy;
 import com.medievalmachinery.mod.npc.organization.SoldierRegistryData;
 import com.medievalmachinery.mod.npc.organization.SoldierRegistryManager;
+import com.medievalmachinery.mod.screen.npc.SoldierInventoryScreenHandler;
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.HashSet;
@@ -424,9 +425,9 @@ public final class SoldierCommandNetworking {
                     return;
                 }
                 if (action == 0) {
-                    values = NpcOrderType.values();
+                    NpcOrderType[] values = NpcOrderType.values();
                     if (value >= 0 && value < values.length) {
-                        Enum requested = values[value];
+                        NpcOrderType requested = values[value];
                         if (requested == NpcOrderType.PATROL) {
                             int started = 0;
                             int skipped = 0;
@@ -455,27 +456,27 @@ public final class SoldierCommandNetworking {
                         }
                         for (MedievalSoldierEntity soldier11 : targets) {
                             soldier11.cancelTemporarySupplyForNewCommand();
-                            soldier11.setOrderType((NpcOrderType)requested);
+                            soldier11.setOrderType(requested);
                         }
-                        SoldierCommandGroupPersistence.persistOrder(player, scope, (NpcOrderType)requested);
+                        SoldierCommandGroupPersistence.persistOrder(player, scope, requested);
                         SoldierCommandGroupPersistence.markOrderRevisionApplied(player.method_51469(), targets);
                     }
                 } else if (action == 1) {
-                    values = NpcCombatStance.values();
+                    NpcCombatStance[] values = NpcCombatStance.values();
                     if (value >= 0 && value < values.length) {
-                        Enum stance = values[value];
+                        NpcCombatStance stance = values[value];
                         for (MedievalSoldierEntity soldier12 : targets) {
-                            soldier12.setCombatStance((NpcCombatStance)stance);
+                            soldier12.setCombatStance(stance);
                         }
-                        SoldierCommandGroupPersistence.persistCombatStance(player, scope, (NpcCombatStance)stance);
+                        SoldierCommandGroupPersistence.persistCombatStance(player, scope, stance);
                         SoldierCommandGroupPersistence.markCombatStanceRevisionApplied(player.method_51469(), targets);
                     }
                 } else if (action == 23) {
-                    values = NpcTargetPriority.values();
+                    NpcTargetPriority[] values = NpcTargetPriority.values();
                     if (value >= 0 && value < values.length) {
-                        Enum priority = values[value];
+                        NpcTargetPriority priority = values[value];
                         for (MedievalSoldierEntity soldier13 : targets) {
-                            soldier13.setTargetPriority((NpcTargetPriority)priority);
+                            soldier13.setTargetPriority(priority);
                         }
                     }
                 } else if (action == 3 && moveTarget != null) {
@@ -488,26 +489,26 @@ public final class SoldierCommandNetworking {
                 }
                 if (action == 0 && value >= 0 && value < NpcOrderType.values().length) {
                     NpcOrderType order = NpcOrderType.values()[value];
-                    key = switch (order) {
+                    String key = switch (order) {
                         default -> throw new IncompatibleClassChangeError();
-                        case NpcOrderType.IDLE -> "message.medieval-machinery.command.chat.wander";
-                        case NpcOrderType.FOLLOW -> "message.medieval-machinery.command.chat.follow";
-                        case NpcOrderType.HOLD_POSITION -> "message.medieval-machinery.command.chat.hold";
-                        case NpcOrderType.PATROL -> "message.medieval-machinery.command.chat.patrol";
-                        case NpcOrderType.RETURN_TO_GARRISON -> "message.medieval-machinery.command.chat.return";
-                        case NpcOrderType.MOVE_TO_POSITION -> "message.medieval-machinery.command.chat.move";
-                        case NpcOrderType.WORK -> "message.medieval-machinery.command.chat.work";
-                        case NpcOrderType.OBSERVATION_POINT -> "message.medieval-machinery.command.chat.observe";
+                        case IDLE -> "message.medieval-machinery.command.chat.wander";
+                        case FOLLOW -> "message.medieval-machinery.command.chat.follow";
+                        case HOLD_POSITION -> "message.medieval-machinery.command.chat.hold";
+                        case PATROL -> "message.medieval-machinery.command.chat.patrol";
+                        case RETURN_TO_GARRISON -> "message.medieval-machinery.command.chat.return";
+                        case MOVE_TO_POSITION -> "message.medieval-machinery.command.chat.move";
+                        case WORK -> "message.medieval-machinery.command.chat.work";
+                        case OBSERVATION_POINT -> "message.medieval-machinery.command.chat.observe";
                     };
                     SoldierCommandScopeResolver.sendCommandFeedback(player, scope, key, new Object[0]);
                 } else if (action == 1 && value >= 0 && value < NpcCombatStance.values().length) {
                     NpcCombatStance stance = NpcCombatStance.values()[value];
-                    key = switch (stance) {
+                    String key = switch (stance) {
                         default -> throw new IncompatibleClassChangeError();
-                        case NpcCombatStance.PASSIVE -> "message.medieval-machinery.command.chat.passive";
-                        case NpcCombatStance.NEUTRAL -> "message.medieval-machinery.command.chat.neutral";
-                        case NpcCombatStance.AGGRESSIVE -> "message.medieval-machinery.command.chat.aggressive";
-                        case NpcCombatStance.RAID -> "message.medieval-machinery.command.chat.raid";
+                        case PASSIVE -> "message.medieval-machinery.command.chat.passive";
+                        case NEUTRAL -> "message.medieval-machinery.command.chat.neutral";
+                        case AGGRESSIVE -> "message.medieval-machinery.command.chat.aggressive";
+                        case RAID -> "message.medieval-machinery.command.chat.raid";
                     };
                     SoldierCommandScopeResolver.sendCommandFeedback(player, scope, key, new Object[0]);
                 }
@@ -754,13 +755,56 @@ public final class SoldierCommandNetworking {
         }
     }
 
+    public static MedievalSoldierEntity findSoldier(class_3222 player, int entityId) {
+        class_3218 world = player.method_51469();
+        class_1297 entity = world.method_8469(entityId);
+        if (entity instanceof MedievalSoldierEntity soldier && soldier.method_5805() && SoldierControlPolicy.canPersonallyControl((class_1657)player, soldier) && player.method_5858((class_1297)soldier) <= 64.0) {
+            return soldier;
+        }
+        if (player.field_7512 instanceof SoldierInventoryScreenHandler handler) {
+            MedievalSoldierEntity openSoldier = handler.getServerSoldier();
+            if (openSoldier != null && openSoldier.method_5805() && SoldierControlPolicy.canPersonallyControl((class_1657)player, openSoldier) && player.method_5858((class_1297)openSoldier) <= 64.0) {
+                if (openSoldier.method_5628() == entityId || (short)openSoldier.method_5628() == (short)entityId || (openSoldier.method_5628() & 0xFFFF) == (entityId & 0xFFFF)) {
+                    return openSoldier;
+                }
+            }
+        }
+        class_238 box = player.method_5829().method_1009(8.0, 8.0, 8.0);
+        List<MedievalSoldierEntity> candidates = world.method_8390(MedievalSoldierEntity.class, box, s -> s.method_5805() && SoldierControlPolicy.canPersonallyControl((class_1657)player, s));
+        MedievalSoldierEntity best = null;
+        double bestDist = Double.MAX_VALUE;
+        for (MedievalSoldierEntity s : candidates) {
+            if ((short)s.method_5628() == (short)entityId || (s.method_5628() & 0xFFFF) == (entityId & 0xFFFF)) {
+                double dist = player.method_5858((class_1297)s);
+                if (dist < bestDist && dist <= 64.0) {
+                    bestDist = dist;
+                    best = s;
+                }
+            }
+        }
+        if (best != null) {
+            return best;
+        }
+        for (MedievalSoldierEntity s : candidates) {
+            if (s.isInventoryGuiOpen() && player.method_5858((class_1297)s) <= 64.0) {
+                return s;
+            }
+        }
+        return null;
+    }
+
     private static void assignGroup(class_3222 player, int entityId, int slot) {
-        MedievalSoldierEntity soldier;
         if (slot < 0 || slot > 512) {
             return;
         }
-        class_1297 entity = player.method_51469().method_8469(entityId);
-        if (!(entity instanceof MedievalSoldierEntity) || !SoldierControlPolicy.canPersonallyControl((class_1657)player, soldier = (MedievalSoldierEntity)entity) || player.method_5858((class_1297)soldier) > 65536.0) {
+        MedievalSoldierEntity soldier = findSoldier(player, entityId);
+        if (soldier == null) {
+            class_1297 entity = player.method_51469().method_8469(entityId);
+            if (entity instanceof MedievalSoldierEntity s && SoldierControlPolicy.canPersonallyControl((class_1657)player, s)) {
+                soldier = s;
+            }
+        }
+        if (soldier == null || !SoldierControlPolicy.canPersonallyControl((class_1657)player, soldier) || player.method_5858((class_1297)soldier) > 65536.0) {
             player.method_7353((class_2561)class_2561.method_43471((String)"message.medieval-machinery.command.invalid_target"), false);
             return;
         }
@@ -785,18 +829,16 @@ public final class SoldierCommandNetworking {
     }
 
     private static void withOwnedSoldier(class_3222 player, int entityId, Consumer<MedievalSoldierEntity> action) {
-        MedievalSoldierEntity soldier;
-        class_1297 entity = player.method_51469().method_8469(entityId);
-        if (entity instanceof MedievalSoldierEntity && (soldier = (MedievalSoldierEntity)entity).method_5805() && SoldierControlPolicy.canPersonallyControl((class_1657)player, soldier) && player.method_5858((class_1297)soldier) <= 64.0) {
+        MedievalSoldierEntity soldier = findSoldier(player, entityId);
+        if (soldier != null) {
             action.accept(soldier);
         }
     }
 
     private static void sendEntityGroupContext(class_3222 player, int entityId) {
         CommandGroupData existingGroup;
-        MedievalSoldierEntity soldier;
-        class_1297 entity = player.method_51469().method_8469(entityId);
-        if (!(entity instanceof MedievalSoldierEntity) || !(soldier = (MedievalSoldierEntity)entity).method_5805() || !SoldierControlPolicy.canPersonallyControl((class_1657)player, soldier) || player.method_5858((class_1297)soldier) > 64.0) {
+        MedievalSoldierEntity soldier = findSoldier(player, entityId);
+        if (soldier == null) {
             return;
         }
         class_3218 world = player.method_51469();
@@ -969,7 +1011,7 @@ public final class SoldierCommandNetworking {
         List uiGroups = selectedCastleData == null ? List.of() : (unassignedScope ? CommandGroupManager.get(world).getUnassignedGroups(player.method_5667()) : CommandGroupManager.get(world).getUiGroups(selectedCastleData.getId(), player.method_5667()));
         class_238 commandArea = player.method_5829().method_1014(64.0);
         class_238 loadedArea = player.method_5829().method_1014(256.0);
-        List loadedOwned = world.method_8390(MedievalSoldierEntity.class, loadedArea, soldier -> soldier.method_5805() && SoldierControlPolicy.canPersonallyControl((class_1657)player, soldier) && selectedCastleData != null && (unassignedScope ? soldier.getNpcIdentity().getCastleId() == null : selectedCastleData.getId().equals(soldier.getNpcIdentity().getCastleId())));
+        List<MedievalSoldierEntity> loadedOwned = world.method_8390(MedievalSoldierEntity.class, loadedArea, soldier -> soldier.method_5805() && SoldierControlPolicy.canPersonallyControl((class_1657)player, soldier) && selectedCastleData != null && (unassignedScope ? soldier.getNpcIdentity().getCastleId() == null : selectedCastleData.getId().equals(soldier.getNpcIdentity().getCastleId())));
         HashMap<UUID, MedievalSoldierEntity> loadedByUuid = new HashMap<UUID, MedievalSoldierEntity>();
         SoldierRegistryManager registry = SoldierRegistryManager.get(world);
         for (MedievalSoldierEntity soldier2 : loadedOwned) {

@@ -635,10 +635,10 @@ ExtendedScreenHandlerFactory {
             return;
         }
         if (mainState.method_11654(WatchpostBlock.ORDER) != this.orderStyle) {
-            this.field_11863.method_8652(this.field_11867, (class_2680)mainState.method_11657(WatchpostBlock.ORDER, (Comparable)((Object)this.orderStyle)), 3);
+            this.field_11863.method_8652(this.field_11867, (class_2680)mainState.method_11657(WatchpostBlock.ORDER, this.orderStyle), 3);
         }
         if ((extension = this.field_11863.method_8320(extensionPos = this.field_11867.method_10093(WatchpostBlock.getExtensionDirection((class_2350)mainState.method_11654((class_2769)WatchpostBlock.FACING))))).method_27852(mainState.method_26204()) && extension.method_11654(WatchpostBlock.ORDER) != this.orderStyle) {
-            this.field_11863.method_8652(extensionPos, (class_2680)extension.method_11657(WatchpostBlock.ORDER, (Comparable)((Object)this.orderStyle)), 3);
+            this.field_11863.method_8652(extensionPos, (class_2680)extension.method_11657(WatchpostBlock.ORDER, this.orderStyle), 3);
         }
     }
 
@@ -981,53 +981,43 @@ ExtendedScreenHandlerFactory {
         buf.method_10807(this.field_11867);
         buf.method_10788(this.getCastleName(), 48);
         buf.writeBoolean(captureMode);
-        if (captureMode || !((var6_4 = this.field_11863) instanceof class_3218)) ** GOTO lbl-1000
-        serverWorld = (class_3218)var6_4;
-        if (this.castleId != null) {
-            v0 /* !! */  = CommandGroupManager.get(serverWorld).getUiGroups(this.castleId, player.method_5667());
-        } else lbl-1000:
-        // 2 sources
-
-        {
-            v0 /* !! */  = List.of();
+        List<CommandGroupData> groups = List.of();
+        if (!captureMode && this.field_11863 instanceof class_3218 serverWorld) {
+            if (this.castleId != null) {
+                groups = CommandGroupManager.get(serverWorld).getUiGroups(this.castleId, player.method_5667());
+            }
         }
-        groups = v0 /* !! */ ;
         buf.method_10804(groups.size());
         for (CommandGroupData group : groups) {
             buf.method_10797(group.getId());
             buf.method_10788(group.getName(), 48);
         }
-        if (captureMode || !((var7_7 = this.field_11863) instanceof class_3218)) ** GOTO lbl-1000
-        serverWorld = (class_3218)var7_7;
-        if (this.castleId != null) {
-            v1 /* !! */  = PromotionRules.eligibleCandidates(serverWorld, this.castleId);
-        } else lbl-1000:
-        // 2 sources
-
-        {
-            v1 /* !! */  = List.of();
+        List<SoldierRegistryData> promotions = List.of();
+        if (!captureMode && this.field_11863 instanceof class_3218 serverWorld) {
+            if (this.castleId != null) {
+                promotions = PromotionRules.eligibleCandidates(serverWorld, this.castleId);
+            }
         }
-        promotions = v1 /* !! */ ;
         buf.method_10804(promotions.size());
         for (SoldierRegistryData data : promotions) {
             buf.method_10797(data.getSoldierId());
             buf.method_10788(data.getName(), 48);
             buf.method_10788(data.getRank(), 16);
             buf.method_10804(data.getLevel());
-            targetRank = PromotionRules.targetRank((class_3218)this.field_11863, this.castleId, data).serializedName();
+            String targetRank = PromotionRules.targetRank((class_3218)this.field_11863, this.castleId, data).serializedName();
             buf.method_10788(targetRank, 16);
-            cfg = MedievalMachineryConfig.get();
-            buf.method_10804("general".equals(targetRank) != false ? cfg.generalEmeraldCost : cfg.captainEmeraldCost);
-            buf.method_10804("general".equals(targetRank) != false ? cfg.generalDiamondCost : cfg.captainDiamondCost);
-            knights = PromotionRules.knightCount((class_3218)this.field_11863, this.castleId);
-            soldiers = PromotionRules.soldierCount((class_3218)this.field_11863, this.castleId);
+            MedievalMachineryConfig cfg = MedievalMachineryConfig.get();
+            buf.method_10804("general".equals(targetRank) ? cfg.generalEmeraldCost : cfg.captainEmeraldCost);
+            buf.method_10804("general".equals(targetRank) ? cfg.generalDiamondCost : cfg.captainDiamondCost);
+            int knights = PromotionRules.knightCount((class_3218)this.field_11863, this.castleId);
+            int soldiers = PromotionRules.soldierCount((class_3218)this.field_11863, this.castleId);
             buf.method_10804(knights);
             buf.method_10804(soldiers);
-            buf.method_10804("general".equals(targetRank) != false ? cfg.generalMinimumLevel : cfg.captainMinimumLevel);
-            buf.method_10804("general".equals(targetRank) != false ? cfg.generalRequiredKnights : cfg.captainRequiredKnights);
-            buf.method_10804("general".equals(targetRank) != false ? cfg.generalRequiredSoldiers : 0);
+            buf.method_10804("general".equals(targetRank) ? cfg.generalMinimumLevel : cfg.captainMinimumLevel);
+            buf.method_10804("general".equals(targetRank) ? cfg.generalRequiredKnights : cfg.captainRequiredKnights);
+            buf.method_10804("general".equals(targetRank) ? cfg.generalRequiredSoldiers : 0);
         }
-        recruitmentConfig = MedievalMachineryConfig.get();
+        MedievalMachineryConfig recruitmentConfig = MedievalMachineryConfig.get();
         buf.writeBoolean(recruitmentConfig.recruitmentCostsEnabled);
         for (NpcRole role : NpcRole.values()) {
             buf.method_10804(RecruitmentCostPolicy.emeraldCost(recruitmentConfig, role));

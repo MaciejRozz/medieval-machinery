@@ -116,31 +116,20 @@ public final class CastleAreaService {
         return new Bounds(center.method_10263() - radius, center.method_10260() - radius, center.method_10263() + radius, center.method_10260() + radius);
     }
 
-    /*
-     * Unable to fully structure code
-     */
     private static boolean containsPolygon(List<class_2338> points, double x, double z) {
-        inside = false;
-        i = 0;
-        j = points.size() - 1;
-        while (i < points.size()) {
-            xi = (double)points.get(i).method_10263() + 0.5;
-            zi = (double)points.get(i).method_10260() + 0.5;
-            xj = (double)points.get(j).method_10263() + 0.5;
-            if (zi > z == (zj = (double)points.get(j).method_10260() + 0.5) > z) ** GOTO lbl-1000
-            v0 = zj - zi == 0.0 ? 1.0E-9 : zj - zi;
-            if (x < (xj - xi) * (z - zi) / v0 + xi) {
-                v1 = true;
-            } else lbl-1000:
-            // 2 sources
-
-            {
-                v1 = crosses = false;
+        boolean inside = false;
+        int j = points.size() - 1;
+        for (int i = 0; i < points.size(); j = i++) {
+            double xi = (double)points.get(i).method_10263() + 0.5;
+            double zi = (double)points.get(i).method_10260() + 0.5;
+            double xj = (double)points.get(j).method_10263() + 0.5;
+            double zj = (double)points.get(j).method_10260() + 0.5;
+            if ((zi > z) != (zj > z)) {
+                double denom = (zj - zi == 0.0) ? 1.0E-9 : (zj - zi);
+                if (x < (xj - xi) * (z - zi) / denom + xi) {
+                    inside = !inside;
+                }
             }
-            if (crosses) {
-                inside = inside == false;
-            }
-            j = i++;
         }
         return inside;
     }

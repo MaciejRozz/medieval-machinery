@@ -34,10 +34,16 @@ public final class GarrisonManager
 extends class_18 {
     private static final String SAVE_ID = "medieval-machinery_garrisons";
     private final Map<UUID, GarrisonData> garrisons = new LinkedHashMap<UUID, GarrisonData>();
+    private boolean pruned = false;
 
     public static GarrisonManager get(class_3218 world) {
         class_3218 overworld = world.method_8503().method_30002();
-        return (GarrisonManager)overworld.method_17983().method_17924(GarrisonManager::fromNbt, GarrisonManager::new, SAVE_ID);
+        GarrisonManager manager = (GarrisonManager)overworld.method_17983().method_17924(GarrisonManager::fromNbt, GarrisonManager::new, SAVE_ID);
+        if (!manager.pruned) {
+            manager.pruned = true;
+            manager.pruneDeadSoldiers(SoldierRegistryManager.get(overworld));
+        }
+        return manager;
     }
 
     public GarrisonData create(UUID ownerId, @Nullable UUID kingdomId, String name) {
@@ -135,6 +141,41 @@ extends class_18 {
     public void unregisterSoldier(UUID garrisonId, UUID soldierId) {
         GarrisonData garrison = this.garrisons.get(garrisonId);
         if (garrison != null && garrison.removeSoldier(soldierId)) {
+            this.method_80();
+        }
+    }
+
+    public boolean removeSoldierEverywhere(UUID soldierId) {
+        if (soldierId == null) {
+            return false;
+        }
+        boolean changed = false;
+        for (GarrisonData garrison : this.garrisons.values()) {
+            changed |= garrison.removeSoldier(soldierId);
+        }
+        if (changed) {
+            this.method_80();
+        }
+        return changed;
+    }
+
+    public void pruneDeadSoldiers(SoldierRegistryManager registry) {
+        if (registry == null) {
+            return;
+        }
+        boolean changed = false;
+        for (GarrisonData garrison : this.garrisons.values()) {
+            List<UUID> toRemove = new ArrayList<UUID>();
+            for (UUID soldierId : garrison.getSoldierIds()) {
+                if (registry.get(soldierId) == null) {
+                    toRemove.add(soldierId);
+                }
+            }
+            for (UUID deadId : toRemove) {
+                changed |= garrison.removeSoldier(deadId);
+            }
+        }
+        if (changed) {
             this.method_80();
         }
     }
@@ -396,7 +437,7 @@ extends class_18 {
     public class_2487 method_75(class_2487 nbt) {
         class_2499 list = new class_2499();
         for (GarrisonData garrison : this.garrisons.values()) {
-            list.add((Object)garrison.toNbt());
+            list.add(garrison.toNbt());
         }
         nbt.method_10566("Garrisons", (class_2520)list);
         return nbt;

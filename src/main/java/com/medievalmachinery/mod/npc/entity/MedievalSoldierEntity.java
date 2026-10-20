@@ -886,30 +886,30 @@ NpcMachineResourceAccess {
 
     protected void method_5693() {
         super.method_5693();
-        this.field_6011.method_12784(TRACKED_ORDER_STYLE, (Object)OrderStyle.NONE.ordinal());
-        this.field_6011.method_12784(TRACKED_ARMOR_TIER, (Object)ArmorTier.ORDER.ordinal());
-        this.field_6011.method_12784(TRACKED_ROLE, (Object)NpcRole.SWORDSMAN.ordinal());
-        this.field_6011.method_12784(TRACKED_TARGET_PRIORITY, (Object)NpcTargetPriority.CLOSEST.ordinal());
-        this.field_6011.method_12784(TRACKED_PREFERRED_MELEE_WEAPON, (Object)NpcPreferredMeleeWeapon.SWORD.ordinal());
-        this.field_6011.method_12784(TRACKED_RANK, (Object)NpcRank.NONE.ordinal());
-        this.field_6011.method_12784(TRACKED_ARMOR_STYLE_OVERRIDE, (Object)-1);
-        this.field_6011.method_12784(TRACKED_LEVEL, (Object)1);
-        this.field_6011.method_12784(TRACKED_EXPERIENCE, (Object)0);
-        this.field_6011.method_12784(TRACKED_MORALE, (Object)Float.valueOf(50.0f));
-        this.field_6011.method_12784(TRACKED_CASTLE_NAME, (Object)"-");
-        this.field_6011.method_12784(TRACKED_ORDER_TYPE, (Object)NpcOrderType.IDLE.ordinal());
-        this.field_6011.method_12784(TRACKED_COMBAT_STANCE, (Object)NpcCombatStance.NEUTRAL.ordinal());
-        this.field_6011.method_12784(TRACKED_HUNGER, (Object)20);
-        this.field_6011.method_12784(TRACKED_RANGED_ATTACK_TICKS, (Object)0);
-        this.field_6011.method_12784(TRACKED_RANGED_VISUAL_STATE, (Object)NpcRangedVisualState.IDLE.ordinal());
-        this.field_6011.method_12784(TRACKED_FORMATION, (Object)NpcFormation.FREE.ordinal());
-        this.field_6011.method_12784(TRACKED_SHIELD_MODE, (Object)NpcShieldMode.AUTO.ordinal());
-        this.field_6011.method_12784(TRACKED_BODYGUARD_DUTY, (Object)false);
-        this.field_6011.method_12784(TRACKED_QUARTERMASTER_FIELD_COUNT, (Object)0);
-        this.field_6011.method_12784(TRACKED_QUARTERMASTER_COMPOSTER, (Object)false);
-        this.field_6011.method_12784(TRACKED_QUARTERMASTER_COMPOSTING, (Object)false);
-        this.field_6011.method_12784(TRACKED_QUARTERMASTER_PLANT_ITEM, (Object)0);
-        this.field_6011.method_12784(TRACKED_MACHINE_HELD_VISUAL, (Object)class_1799.field_8037);
+        this.field_6011.method_12784(TRACKED_ORDER_STYLE, OrderStyle.NONE.ordinal());
+        this.field_6011.method_12784(TRACKED_ARMOR_TIER, ArmorTier.ORDER.ordinal());
+        this.field_6011.method_12784(TRACKED_ROLE, NpcRole.SWORDSMAN.ordinal());
+        this.field_6011.method_12784(TRACKED_TARGET_PRIORITY, NpcTargetPriority.CLOSEST.ordinal());
+        this.field_6011.method_12784(TRACKED_PREFERRED_MELEE_WEAPON, NpcPreferredMeleeWeapon.SWORD.ordinal());
+        this.field_6011.method_12784(TRACKED_RANK, NpcRank.NONE.ordinal());
+        this.field_6011.method_12784(TRACKED_ARMOR_STYLE_OVERRIDE, -1);
+        this.field_6011.method_12784(TRACKED_LEVEL, 1);
+        this.field_6011.method_12784(TRACKED_EXPERIENCE, 0);
+        this.field_6011.method_12784(TRACKED_MORALE, Float.valueOf(50.0f));
+        this.field_6011.method_12784(TRACKED_CASTLE_NAME, "-");
+        this.field_6011.method_12784(TRACKED_ORDER_TYPE, NpcOrderType.IDLE.ordinal());
+        this.field_6011.method_12784(TRACKED_COMBAT_STANCE, NpcCombatStance.NEUTRAL.ordinal());
+        this.field_6011.method_12784(TRACKED_HUNGER, 20);
+        this.field_6011.method_12784(TRACKED_RANGED_ATTACK_TICKS, 0);
+        this.field_6011.method_12784(TRACKED_RANGED_VISUAL_STATE, NpcRangedVisualState.IDLE.ordinal());
+        this.field_6011.method_12784(TRACKED_FORMATION, NpcFormation.FREE.ordinal());
+        this.field_6011.method_12784(TRACKED_SHIELD_MODE, NpcShieldMode.AUTO.ordinal());
+        this.field_6011.method_12784(TRACKED_BODYGUARD_DUTY, false);
+        this.field_6011.method_12784(TRACKED_QUARTERMASTER_FIELD_COUNT, 0);
+        this.field_6011.method_12784(TRACKED_QUARTERMASTER_COMPOSTER, false);
+        this.field_6011.method_12784(TRACKED_QUARTERMASTER_COMPOSTING, false);
+        this.field_6011.method_12784(TRACKED_QUARTERMASTER_PLANT_ITEM, 0);
+        this.field_6011.method_12784(TRACKED_MACHINE_HELD_VISUAL, class_1799.field_8037);
     }
 
     public void equipRecruitStarterWeapon() {
@@ -923,39 +923,38 @@ NpcMachineResourceAccess {
             case KNIGHT: 
             case CANNONEER: 
             case SCOUT: {
-                class_1799 class_17992 = new class_1799((class_1935)class_1802.field_8091);
+                weapon = new class_1799((class_1935)class_1802.field_8091);
                 break;
             }
             case AXEMAN: 
             case ENGINEER: {
-                class_1799 class_17992 = new class_1799((class_1935)class_1802.field_8406);
+                weapon = new class_1799((class_1935)class_1802.field_8406);
                 break;
             }
             case QUARTERMASTER: {
-                class_1799 class_17992 = new class_1799((class_1935)class_1802.field_8167);
+                weapon = new class_1799((class_1935)class_1802.field_8167);
                 break;
             }
             case ARCHER: 
             case MOUNTED_ARCHER: {
-                class_1799 class_17992 = new class_1799((class_1935)class_1802.field_8102);
+                weapon = new class_1799((class_1935)class_1802.field_8102);
                 break;
             }
             case CROSSBOWMAN: {
-                class_1799 class_17992 = new class_1799((class_1935)class_1802.field_8399);
+                weapon = new class_1799((class_1935)class_1802.field_8399);
                 break;
             }
             case RECRUIT: {
-                class_1799 class_17992;
                 if (this.method_6051().method_43056()) {
-                    class_17992 = new class_1799((class_1935)class_1802.field_8091);
+                    weapon = new class_1799((class_1935)class_1802.field_8091);
                     break;
                 }
-                class_17992 = new class_1799((class_1935)class_1802.field_8406);
+                weapon = new class_1799((class_1935)class_1802.field_8406);
                 break;
             }
             case SPEARMAN: 
             case MOUNTED_KNIGHT: {
-                class_1799 class_17992 = weapon = new class_1799((class_1935)ModItems.WOOD_WAR_SPEAR);
+                weapon = new class_1799((class_1935)ModItems.WOOD_WAR_SPEAR);
             }
         }
         if (!weapon.method_7960()) {
@@ -1050,7 +1049,7 @@ NpcMachineResourceAccess {
             this.method_18800(0.0, this.method_18798().field_1351, 0.0);
         }
         this.hungerData.tick(this);
-        this.field_6011.method_12778(TRACKED_HUNGER, (Object)this.hungerData.getFoodLevel());
+        this.field_6011.method_12778(TRACKED_HUNGER, this.hungerData.getFoodLevel());
         this.updateHungerMovementModifier();
         this.eatingController.tick(this);
         this.scoutController.tick(this);
@@ -1080,9 +1079,9 @@ NpcMachineResourceAccess {
         }
         if (!this.method_37908().field_9236 && this.getRangedAttackTicks() > 0) {
             int nextRangedTicks = this.getRangedAttackTicks() - 1;
-            this.field_6011.method_12778(TRACKED_RANGED_ATTACK_TICKS, (Object)nextRangedTicks);
+            this.field_6011.method_12778(TRACKED_RANGED_ATTACK_TICKS, nextRangedTicks);
             if (nextRangedTicks <= 0) {
-                this.field_6011.method_12778(TRACKED_RANGED_VISUAL_STATE, (Object)NpcRangedVisualState.IDLE.ordinal());
+                this.field_6011.method_12778(TRACKED_RANGED_VISUAL_STATE, NpcRangedVisualState.IDLE.ordinal());
             }
         }
         this.combatController.tickTargetLifecycle(this);
@@ -1100,7 +1099,7 @@ NpcMachineResourceAccess {
         this.equipmentController.onPersonalInventoryChanged(this);
         if (!this.method_37908().field_9236 && this.getNpcRole() == NpcRole.QUARTERMASTER) {
             class_1799 selected = this.personalInventory.method_5438(9);
-            this.field_6011.method_12778(TRACKED_QUARTERMASTER_PLANT_ITEM, (Object)(selected.method_7960() ? 0 : class_7923.field_41178.method_10206((Object)selected.method_7909())));
+            this.field_6011.method_12778(TRACKED_QUARTERMASTER_PLANT_ITEM, (selected.method_7960() ? 0 : class_7923.field_41178.method_10206(selected.method_7909())));
         }
     }
 
@@ -1452,7 +1451,7 @@ NpcMachineResourceAccess {
             return;
         }
         int food = this.hungerData.getFoodLevel();
-        double d = food <= 2 ? -0.3 : (penalty = food <= 6 ? -0.15 : 0.0);
+        penalty = food <= 2 ? -0.3 : (food <= 6 ? -0.15 : 0.0);
         if (Double.compare(penalty, this.modifierState.hungerSpeedPenalty) == 0) {
             return;
         }
@@ -1479,7 +1478,7 @@ NpcMachineResourceAccess {
     }
 
     void syncTrackedHunger() {
-        this.field_6011.method_12778(TRACKED_HUNGER, (Object)this.hungerData.getFoodLevel());
+        this.field_6011.method_12778(TRACKED_HUNGER, this.hungerData.getFoodLevel());
     }
 
     boolean isBusyWithCombatForEating() {
@@ -2035,7 +2034,7 @@ NpcMachineResourceAccess {
     }
 
     void orderTrackType(NpcOrderType value) {
-        this.field_6011.method_12778(TRACKED_ORDER_TYPE, (Object)value.ordinal());
+        this.field_6011.method_12778(TRACKED_ORDER_TYPE, value.ordinal());
     }
 
     MedievalSoldierEquipmentController supplyEquipmentController() {
@@ -2071,7 +2070,7 @@ NpcMachineResourceAccess {
     }
 
     void setQuartermasterCompostingVisual(boolean composting) {
-        this.field_6011.method_12778(TRACKED_QUARTERMASTER_COMPOSTING, (Object)composting);
+        this.field_6011.method_12778(TRACKED_QUARTERMASTER_COMPOSTING, composting);
     }
 
     public class_1799 getQuartermasterPlantingSelection() {
@@ -2098,7 +2097,7 @@ NpcMachineResourceAccess {
             QuartermasterComposterPoiService.restore(serverWorld, previous);
         }
         this.quartermasterFarmState.composter = pos.method_10062();
-        this.field_6011.method_12778(TRACKED_QUARTERMASTER_COMPOSTER, (Object)true);
+        this.field_6011.method_12778(TRACKED_QUARTERMASTER_COMPOSTER, true);
         class_19372 = this.method_37908();
         if (class_19372 instanceof class_3218) {
             serverWorld = (class_3218)class_19372;
@@ -2115,7 +2114,7 @@ NpcMachineResourceAccess {
         }
         boolean added = this.quartermasterFarmState.addField(pos);
         if (added) {
-            this.field_6011.method_12778(TRACKED_QUARTERMASTER_FIELD_COUNT, (Object)this.quartermasterFarmState.fieldCenters.size());
+            this.field_6011.method_12778(TRACKED_QUARTERMASTER_FIELD_COUNT, this.quartermasterFarmState.fieldCenters.size());
             this.quartermasterFarmingController.clearWork();
             this.maintenanceState.registryDirty = true;
         }
@@ -2124,7 +2123,7 @@ NpcMachineResourceAccess {
 
     public void clearQuartermasterFields() {
         this.quartermasterFarmState.clearFields();
-        this.field_6011.method_12778(TRACKED_QUARTERMASTER_FIELD_COUNT, (Object)0);
+        this.field_6011.method_12778(TRACKED_QUARTERMASTER_FIELD_COUNT, 0);
         this.quartermasterFarmingController.clearWork();
         this.maintenanceState.registryDirty = true;
     }
@@ -2132,7 +2131,7 @@ NpcMachineResourceAccess {
     public boolean removeQuartermasterField(int index) {
         boolean removed = this.quartermasterFarmState.removeField(index);
         if (removed) {
-            this.field_6011.method_12778(TRACKED_QUARTERMASTER_FIELD_COUNT, (Object)this.quartermasterFarmState.fieldCenters.size());
+            this.field_6011.method_12778(TRACKED_QUARTERMASTER_FIELD_COUNT, this.quartermasterFarmState.fieldCenters.size());
             this.quartermasterFarmingController.clearWork();
             this.maintenanceState.registryDirty = true;
         }
@@ -2143,7 +2142,7 @@ NpcMachineResourceAccess {
         class_1937 class_19372;
         class_2338 oldComposter = this.quartermasterFarmState.composter;
         this.quartermasterFarmState.composter = null;
-        this.field_6011.method_12778(TRACKED_QUARTERMASTER_COMPOSTER, (Object)false);
+        this.field_6011.method_12778(TRACKED_QUARTERMASTER_COMPOSTER, false);
         if (oldComposter != null && (class_19372 = this.method_37908()) instanceof class_3218) {
             class_3218 serverWorld = (class_3218)class_19372;
             QuartermasterComposterPoiService.restore(serverWorld, oldComposter);
@@ -2364,7 +2363,7 @@ NpcMachineResourceAccess {
 
     void setMachineHeldVisual(class_1799 stack) {
         if (!this.method_37908().field_9236) {
-            this.field_6011.method_12778(TRACKED_MACHINE_HELD_VISUAL, (Object)(stack == null ? class_1799.field_8037 : stack.method_46651(1)));
+            this.field_6011.method_12778(TRACKED_MACHINE_HELD_VISUAL, (stack == null ? class_1799.field_8037 : stack.method_46651(1)));
         }
     }
 
@@ -2418,8 +2417,8 @@ NpcMachineResourceAccess {
             experience -= needed;
             ++level;
         }
-        this.field_6011.method_12778(TRACKED_LEVEL, (Object)level);
-        this.field_6011.method_12778(TRACKED_EXPERIENCE, (Object)experience);
+        this.field_6011.method_12778(TRACKED_LEVEL, level);
+        this.field_6011.method_12778(TRACKED_EXPERIENCE, experience);
         if (level != oldLevel) {
             this.applyLevelProgressionModifiers();
             this.addMorale(5.0f * (float)(level - oldLevel));
@@ -2498,7 +2497,7 @@ NpcMachineResourceAccess {
 
     public void setMorale(float value) {
         this.moraleData.set(value);
-        this.field_6011.method_12778(TRACKED_MORALE, (Object)Float.valueOf(this.moraleData.get()));
+        this.field_6011.method_12778(TRACKED_MORALE, Float.valueOf(this.moraleData.get()));
         this.applyMoraleModifiers();
     }
 
@@ -2519,7 +2518,7 @@ NpcMachineResourceAccess {
         if ((leadershipRecovery = NpcLeadershipPolicy.moraleRecovery(leadership = this.getNearbyLeadershipStrength())) > 0.0f && this.moraleData.get() < 80.0f) {
             this.moraleData.add(Math.min(leadershipRecovery, 80.0f - this.moraleData.get()));
         }
-        this.field_6011.method_12778(TRACKED_MORALE, (Object)Float.valueOf(this.moraleData.get()));
+        this.field_6011.method_12778(TRACKED_MORALE, Float.valueOf(this.moraleData.get()));
         this.applyMoraleModifiers();
         this.applyLeadershipCombatModifier(leadership);
     }
@@ -2726,10 +2725,10 @@ NpcMachineResourceAccess {
 
     public void setNpcRole(NpcRole role) {
         this.role = role == null ? NpcRole.SWORDSMAN : role;
-        this.field_6011.method_12778(TRACKED_ROLE, (Object)this.role.ordinal());
+        this.field_6011.method_12778(TRACKED_ROLE, this.role.ordinal());
         if (this.role == NpcRole.MOUNTED_KNIGHT && this.preferredMeleeWeapon == NpcPreferredMeleeWeapon.SWORD) {
             this.preferredMeleeWeapon = NpcPreferredMeleeWeapon.SPEAR;
-            this.field_6011.method_12778(TRACKED_PREFERRED_MELEE_WEAPON, (Object)this.preferredMeleeWeapon.ordinal());
+            this.field_6011.method_12778(TRACKED_PREFERRED_MELEE_WEAPON, this.preferredMeleeWeapon.ordinal());
         }
         this.updateRoleFollowRange();
         this.maintenanceState.equipmentDirty = true;
@@ -2747,7 +2746,7 @@ NpcMachineResourceAccess {
 
     public void setTargetPriority(NpcTargetPriority priority) {
         this.targetPriority = priority == null ? NpcTargetPriority.CLOSEST : priority;
-        this.field_6011.method_12778(TRACKED_TARGET_PRIORITY, (Object)this.targetPriority.ordinal());
+        this.field_6011.method_12778(TRACKED_TARGET_PRIORITY, this.targetPriority.ordinal());
     }
 
     public boolean supportsPreferredMeleeWeaponSelection() {
@@ -2768,7 +2767,7 @@ NpcMachineResourceAccess {
             return;
         }
         this.preferredMeleeWeapon = preferred == null ? NpcPreferredMeleeWeapon.SWORD : preferred;
-        this.field_6011.method_12778(TRACKED_PREFERRED_MELEE_WEAPON, (Object)this.preferredMeleeWeapon.ordinal());
+        this.field_6011.method_12778(TRACKED_PREFERRED_MELEE_WEAPON, this.preferredMeleeWeapon.ordinal());
         this.maintenanceState.equipmentDirty = true;
         if (!this.method_37908().field_9236) {
             this.equipBestPreferredMeleeWeapon();
@@ -2826,7 +2825,7 @@ NpcMachineResourceAccess {
     }
 
     public void setNpcRank(NpcRank rank) {
-        this.field_6011.method_12778(TRACKED_RANK, (Object)(rank == null ? NpcRank.NONE : rank).ordinal());
+        this.field_6011.method_12778(TRACKED_RANK, (rank == null ? NpcRank.NONE : rank).ordinal());
     }
 
     public long getLastAppliedGroupOrderRevision() {
@@ -2875,7 +2874,7 @@ NpcMachineResourceAccess {
 
     public void setGeneralBodyguardDuty(boolean active) {
         if (!this.method_37908().field_9236) {
-            this.field_6011.method_12778(TRACKED_BODYGUARD_DUTY, (Object)active);
+            this.field_6011.method_12778(TRACKED_BODYGUARD_DUTY, active);
         }
     }
 
@@ -2934,7 +2933,7 @@ NpcMachineResourceAccess {
 
     public void setCombatStance(NpcCombatStance stance) {
         this.combatStance = stance == null ? NpcCombatStance.NEUTRAL : stance;
-        this.field_6011.method_12778(TRACKED_COMBAT_STANCE, (Object)this.combatStance.ordinal());
+        this.field_6011.method_12778(TRACKED_COMBAT_STANCE, this.combatStance.ordinal());
         if (this.combatStance == NpcCombatStance.PASSIVE) {
             this.method_5980(null);
         }
@@ -3036,7 +3035,7 @@ NpcMachineResourceAccess {
     }
 
     public void setFormation(NpcFormation formation) {
-        this.field_6011.method_12778(TRACKED_FORMATION, (Object)(formation == null ? NpcFormation.FREE : formation).ordinal());
+        this.field_6011.method_12778(TRACKED_FORMATION, (formation == null ? NpcFormation.FREE : formation).ordinal());
         this.formationState.resetHeading();
     }
 
@@ -3055,7 +3054,7 @@ NpcMachineResourceAccess {
     }
 
     public void setShieldMode(NpcShieldMode mode) {
-        this.field_6011.method_12778(TRACKED_SHIELD_MODE, (Object)(mode == null ? NpcShieldMode.AUTO : mode).ordinal());
+        this.field_6011.method_12778(TRACKED_SHIELD_MODE, (mode == null ? NpcShieldMode.AUTO : mode).ordinal());
         if (this.getShieldMode() == NpcShieldMode.RAISED && this.hasUsableShield() && this.combatState.shieldReRaiseTicks <= 0 && this.combatState.shieldBlockCooldownTicks <= 0) {
             if (this.method_6115()) {
                 this.method_6075();
@@ -3064,7 +3063,7 @@ NpcMachineResourceAccess {
         }
         if (this.getShieldMode() == NpcShieldMode.RAISED && this.isHoldingRangedWeapon()) {
             this.stopRangedWeaponUse();
-            this.field_6011.method_12778(TRACKED_RANGED_ATTACK_TICKS, (Object)0);
+            this.field_6011.method_12778(TRACKED_RANGED_ATTACK_TICKS, 0);
         }
     }
 
@@ -3248,7 +3247,7 @@ NpcMachineResourceAccess {
     }
 
     public void setOrderStyle(OrderStyle style) {
-        this.field_6011.method_12778(TRACKED_ORDER_STYLE, (Object)(style == null ? OrderStyle.NONE : style).ordinal());
+        this.field_6011.method_12778(TRACKED_ORDER_STYLE, (style == null ? OrderStyle.NONE : style).ordinal());
     }
 
     public ArmorStyle getArmorStyle() {
@@ -3262,7 +3261,7 @@ NpcMachineResourceAccess {
 
     public void setArmorStyleOverride(ArmorStyle style) {
         this.armorStyleOverride = style;
-        this.field_6011.method_12778(TRACKED_ARMOR_STYLE_OVERRIDE, (Object)(style == null ? -1 : style.ordinal()));
+        this.field_6011.method_12778(TRACKED_ARMOR_STYLE_OVERRIDE, (style == null ? -1 : style.ordinal()));
     }
 
     public ArmorTier getArmorTier() {
@@ -3272,7 +3271,7 @@ NpcMachineResourceAccess {
     }
 
     public void setArmorTier(ArmorTier tier) {
-        this.field_6011.method_12778(TRACKED_ARMOR_TIER, (Object)(tier == null ? ArmorTier.ORDER : tier).ordinal());
+        this.field_6011.method_12778(TRACKED_ARMOR_TIER, (tier == null ? ArmorTier.ORDER : tier).ordinal());
     }
 
     public String getAppearanceId() {
@@ -3306,7 +3305,7 @@ NpcMachineResourceAccess {
 
     public void applyCastleDisplayName(String castleName) {
         String clean = castleName == null ? "" : castleName.trim();
-        this.field_6011.method_12778(TRACKED_CASTLE_NAME, (Object)(clean.isEmpty() ? "-" : clean));
+        this.field_6011.method_12778(TRACKED_CASTLE_NAME, (clean.isEmpty() ? "-" : clean));
         this.method_5880(false);
     }
 
@@ -3495,10 +3494,10 @@ NpcMachineResourceAccess {
             this.quartermasterFarmState.composter = null;
             this.quartermasterFarmState.clearFields();
         }
-        this.field_6011.method_12778(TRACKED_QUARTERMASTER_FIELD_COUNT, (Object)this.quartermasterFarmState.fieldCenters.size());
-        this.field_6011.method_12778(TRACKED_QUARTERMASTER_COMPOSTER, (Object)(this.quartermasterFarmState.composter != null ? 1 : 0));
+        this.field_6011.method_12778(TRACKED_QUARTERMASTER_FIELD_COUNT, this.quartermasterFarmState.fieldCenters.size());
+        this.field_6011.method_12778(TRACKED_QUARTERMASTER_COMPOSTER, (this.quartermasterFarmState.composter != null));
         class_1799 selectedPlant = this.personalInventory.method_5438(9);
-        this.field_6011.method_12778(TRACKED_QUARTERMASTER_PLANT_ITEM, (Object)(selectedPlant.method_7960() ? 0 : class_7923.field_41178.method_10206((Object)selectedPlant.method_7909())));
+        this.field_6011.method_12778(TRACKED_QUARTERMASTER_PLANT_ITEM, (selectedPlant.method_7960() ? 0 : class_7923.field_41178.method_10206(selectedPlant.method_7909())));
         if (this.quartermasterFarmState.composter != null && (class_19372 = this.method_37908()) instanceof class_3218) {
             class_3218 serverWorld = (class_3218)class_19372;
             QuartermasterComposterPoiService.suppress(serverWorld, this.quartermasterFarmState.composter);
@@ -3511,7 +3510,7 @@ NpcMachineResourceAccess {
         if (this.supportsPreferredMeleeWeaponSelection()) {
             NpcPreferredMeleeWeapon fallback = this.getNpcRole() == NpcRole.MOUNTED_KNIGHT ? NpcPreferredMeleeWeapon.SPEAR : NpcPreferredMeleeWeapon.SWORD;
             this.preferredMeleeWeapon = npc.method_10573("PreferredMeleeWeapon", 8) ? NpcPreferredMeleeWeapon.fromSerializedName(npc.method_10558("PreferredMeleeWeapon")) : fallback;
-            this.field_6011.method_12778(TRACKED_PREFERRED_MELEE_WEAPON, (Object)this.preferredMeleeWeapon.ordinal());
+            this.field_6011.method_12778(TRACKED_PREFERRED_MELEE_WEAPON, this.preferredMeleeWeapon.ordinal());
         }
         this.setNpcRank(npc.method_10573("Rank", 8) ? NpcRank.fromSerializedName(npc.method_10558("Rank")) : NpcRank.NONE);
         this.setOrderType(NpcOrderType.fromSerializedName(npc.method_10558("Order")));
@@ -3541,7 +3540,7 @@ NpcMachineResourceAccess {
         } else {
             this.castleTransferData.clear();
         }
-        this.field_6011.method_12778(TRACKED_HUNGER, (Object)this.hungerData.getFoodLevel());
+        this.field_6011.method_12778(TRACKED_HUNGER, this.hungerData.getFoodLevel());
         if (npc.method_10573("EatingSourceSlot", 3)) {
             this.eatingState.sourceSlot = npc.method_10550("EatingSourceSlot");
             this.eatingState.ticksRemaining = npc.method_10550("EatingTicksRemaining");
@@ -3572,13 +3571,13 @@ NpcMachineResourceAccess {
         this.setAppearanceId(npc.method_10558("Appearance"));
         this.setOrderStyle(OrderStyle.fromSerializedName(npc.method_10558("OrderStyle")));
         this.setArmorTier(ArmorTier.fromSerializedName(npc.method_10558("ArmorTier")));
-        this.field_6011.method_12778(TRACKED_LEVEL, (Object)Math.max(1, npc.method_10573("Level", 3) ? npc.method_10550("Level") : 1));
-        this.field_6011.method_12778(TRACKED_EXPERIENCE, (Object)Math.max(0, npc.method_10573("Experience", 3) ? npc.method_10550("Experience") : 0));
+        this.field_6011.method_12778(TRACKED_LEVEL, Math.max(1, npc.method_10573("Level", 3) ? npc.method_10550("Level") : 1));
+        this.field_6011.method_12778(TRACKED_EXPERIENCE, Math.max(0, npc.method_10573("Experience", 3) ? npc.method_10550("Experience") : 0));
         this.moraleData.set(npc.method_10573("Morale", 5) ? npc.method_10583("Morale") : 50.0f);
-        this.field_6011.method_12778(TRACKED_MORALE, (Object)Float.valueOf(this.moraleData.get()));
+        this.field_6011.method_12778(TRACKED_MORALE, Float.valueOf(this.moraleData.get()));
         this.applyLevelProgressionModifiers();
         this.applyMoraleModifiers();
-        this.field_6011.method_12778(TRACKED_CASTLE_NAME, (Object)(npc.method_10573("CastleDisplayName", 8) ? npc.method_10558("CastleDisplayName") : "-"));
+        this.field_6011.method_12778(TRACKED_CASTLE_NAME, (npc.method_10573("CastleDisplayName", 8) ? npc.method_10558("CastleDisplayName") : "-"));
         this.setArmorStyleOverride(npc.method_10573("ArmorStyleOverride", 8) ? ArmorStyle.fromSerializedName(npc.method_10558("ArmorStyleOverride")) : null);
         if (npc.method_10573("Inventory", 10)) {
             this.personalInventory.method_5448();
@@ -3608,6 +3607,7 @@ NpcMachineResourceAccess {
             class_3218 serverWorld = (class_3218)class_19372;
             CommandGroupManager.get(serverWorld).removeSoldierEverywhere(this.method_5667());
             SoldierRegistryManager.get(serverWorld).remove(this.method_5667());
+            GarrisonManager.get(serverWorld).removeSoldierEverywhere(this.method_5667());
         }
     }
 
@@ -3812,12 +3812,12 @@ NpcMachineResourceAccess {
     }
 
     void beginRangedVisual(NpcRangedVisualState state, int ticks) {
-        this.field_6011.method_12778(TRACKED_RANGED_VISUAL_STATE, (Object)(state == null ? NpcRangedVisualState.IDLE : state).ordinal());
-        this.field_6011.method_12778(TRACKED_RANGED_ATTACK_TICKS, (Object)Math.max(1, ticks));
+        this.field_6011.method_12778(TRACKED_RANGED_VISUAL_STATE, (state == null ? NpcRangedVisualState.IDLE : state).ordinal());
+        this.field_6011.method_12778(TRACKED_RANGED_ATTACK_TICKS, Math.max(1, ticks));
     }
 
     void setRangedVisualState(NpcRangedVisualState state) {
-        this.field_6011.method_12778(TRACKED_RANGED_VISUAL_STATE, (Object)(state == null ? NpcRangedVisualState.IDLE : state).ordinal());
+        this.field_6011.method_12778(TRACKED_RANGED_VISUAL_STATE, (state == null ? NpcRangedVisualState.IDLE : state).ordinal());
     }
 
     void markCrossbowBoltInsertedForVisual() {
@@ -3848,8 +3848,8 @@ NpcMachineResourceAccess {
     }
 
     void clearRangedVisual() {
-        this.field_6011.method_12778(TRACKED_RANGED_VISUAL_STATE, (Object)NpcRangedVisualState.IDLE.ordinal());
-        this.field_6011.method_12778(TRACKED_RANGED_ATTACK_TICKS, (Object)0);
+        this.field_6011.method_12778(TRACKED_RANGED_VISUAL_STATE, NpcRangedVisualState.IDLE.ordinal());
+        this.field_6011.method_12778(TRACKED_RANGED_ATTACK_TICKS, 0);
     }
 
     void stopRangedWeaponUse() {
@@ -3938,7 +3938,6 @@ NpcMachineResourceAccess {
     }
 
     boolean tryMeleeCombatReposition(class_1309 target, double speed) {
-        double moveX;
         double dz;
         if (target == null || !this.combatMovementState.mayReposition()) {
             return false;
@@ -3956,7 +3955,7 @@ NpcMachineResourceAccess {
         double sideX = -awayZ * (double)this.combatMovementState.preferredSide(this.method_5667().hashCode());
         double sideZ = awayX * (double)this.combatMovementState.preferredSide(this.method_5667().hashCode());
         int choice = this.method_6051().method_43048(3);
-        double d = choice == 2 ? awayX : (moveX = choice == 1 ? -sideX : sideX);
+        double moveX = choice == 2 ? awayX : (choice == 1 ? -sideX : sideX);
         double moveZ = choice == 2 ? awayZ : (choice == 1 ? -sideZ : sideZ);
         class_243 candidate = new class_243(this.method_23317() + moveX * 0.85, this.method_23318(), this.method_23321() + moveZ * 0.85);
         if (!this.isSafeCombatPosition(candidate) || !this.isWithinPatrolCombatLeash(target)) {

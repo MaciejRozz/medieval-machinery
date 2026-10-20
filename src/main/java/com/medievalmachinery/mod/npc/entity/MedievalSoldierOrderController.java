@@ -90,12 +90,21 @@ final class MedievalSoldierOrderController {
                 if (soldier.getNpcRole() == NpcRole.CANNONEER) {
                     yield NpcOrderType.IDLE;
                 }
+                if (soldier.getNpcRole() == NpcRole.QUARTERMASTER) {
+                    yield NpcOrderType.WORK;
+                }
                 if (soldier.getHomePosition() != null) {
                     yield NpcOrderType.PATROL;
                 }
                 yield NpcOrderType.IDLE;
             }
-            case NpcOrderType.PATROL, NpcOrderType.RETURN_TO_GARRISON, NpcOrderType.MOVE_TO_POSITION, NpcOrderType.WORK, NpcOrderType.OBSERVATION_POINT -> NpcOrderType.IDLE;
+            case NpcOrderType.WORK -> {
+                if (soldier.getHomePosition() != null) {
+                    yield NpcOrderType.PATROL;
+                }
+                yield NpcOrderType.IDLE;
+            }
+            case NpcOrderType.PATROL, NpcOrderType.RETURN_TO_GARRISON, NpcOrderType.MOVE_TO_POSITION, NpcOrderType.OBSERVATION_POINT -> NpcOrderType.IDLE;
         };
         soldier.setOrderType(next);
         player.method_7353((class_2561)class_2561.method_43469((String)"message.medieval-machinery.npc.order_changed", (Object[])new Object[]{class_2561.method_43471((String)("npc.order.medieval-machinery." + next.serializedName()))}), false);

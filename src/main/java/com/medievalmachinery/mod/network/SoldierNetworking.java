@@ -53,6 +53,8 @@ import com.medievalmachinery.mod.npc.organization.SoldierTransferService;
 import com.medievalmachinery.mod.npc.patrol.PatrolRoute;
 import com.medievalmachinery.mod.npc.patrol.PatrolWaypoint;
 import com.medievalmachinery.mod.registry.ModEntities;
+import com.medievalmachinery.mod.screen.npc.SoldierInventoryScreenHandler;
+import java.util.List;
 import java.util.Map;
 import java.util.UUID;
 import java.util.concurrent.ConcurrentHashMap;
@@ -63,6 +65,7 @@ import net.minecraft.class_1269;
 import net.minecraft.class_1297;
 import net.minecraft.class_1657;
 import net.minecraft.class_1799;
+import net.minecraft.class_238;
 import net.minecraft.class_1937;
 import net.minecraft.class_2246;
 import net.minecraft.class_2338;
@@ -413,7 +416,6 @@ public final class SoldierNetworking {
             int entityId = buf.method_10816();
             UUID targetCastleId = buf.method_10790();
             server.execute(() -> {
-                boolean validKingdom;
                 MedievalSoldierEntity soldier;
                 class_1297 entity = player.method_51469().method_8469(entityId);
                 if (!(entity instanceof MedievalSoldierEntity) || !(soldier = (MedievalSoldierEntity)entity).method_5805() || !SoldierControlPolicy.canPersonallyControl((class_1657)player, soldier) || player.method_5858((class_1297)soldier) > 64.0) {
@@ -425,7 +427,7 @@ public final class SoldierNetworking {
                 UUID sourceCastleId = soldier.getNpcIdentity().getCastleId();
                 GarrisonData source = sourceCastleId == null ? null : garrisons.get(sourceCastleId);
                 UUID soldierKingdom = soldier.getNpcIdentity().getKingdomId();
-                boolean bl = target != null && (soldierKingdom != null ? soldierKingdom.equals(target.getKingdomId()) : target.getKingdomId() == null && target.getOwnerId().equals(player.method_5667())) ? true : (validKingdom = false);
+                boolean validKingdom = target != null && (soldierKingdom != null ? soldierKingdom.equals(target.getKingdomId()) : target.getKingdomId() == null && target.getOwnerId().equals(player.method_5667()));
                 if (!validKingdom || sourceCastleId != null && sourceCastleId.equals(targetCastleId)) {
                     player.method_7353((class_2561)class_2561.method_43471((String)"message.medieval-machinery.castle_transfer.invalid"), false);
                     return;
@@ -756,12 +758,42 @@ public final class SoldierNetworking {
     }
 
     private static MedievalSoldierEntity ownedSoldier(class_3222 player, int entityId, double maxDistanceSq) {
-        MedievalSoldierEntity soldier;
-        class_1297 entity = player.method_51469().method_8469(entityId);
-        if (!(entity instanceof MedievalSoldierEntity) || !(soldier = (MedievalSoldierEntity)entity).method_5805() || !SoldierControlPolicy.canPersonallyControl((class_1657)player, soldier) || player.method_5858((class_1297)soldier) > maxDistanceSq) {
-            return null;
+        class_3218 world = player.method_51469();
+        class_1297 entity = world.method_8469(entityId);
+        if (entity instanceof MedievalSoldierEntity soldier && soldier.method_5805() && SoldierControlPolicy.canPersonallyControl((class_1657)player, soldier) && player.method_5858((class_1297)soldier) <= maxDistanceSq) {
+            return soldier;
         }
-        return soldier;
+        if (player.field_7512 instanceof SoldierInventoryScreenHandler handler) {
+            MedievalSoldierEntity openSoldier = handler.getServerSoldier();
+            if (openSoldier != null && openSoldier.method_5805() && SoldierControlPolicy.canPersonallyControl((class_1657)player, openSoldier) && player.method_5858((class_1297)openSoldier) <= maxDistanceSq) {
+                if (openSoldier.method_5628() == entityId || (short)openSoldier.method_5628() == (short)entityId || (openSoldier.method_5628() & 0xFFFF) == (entityId & 0xFFFF)) {
+                    return openSoldier;
+                }
+            }
+        }
+        double reach = Math.min(8.0, Math.sqrt(maxDistanceSq));
+        class_238 box = player.method_5829().method_1009(reach, reach, reach);
+        List<MedievalSoldierEntity> candidates = world.method_8390(MedievalSoldierEntity.class, box, s -> s.method_5805() && SoldierControlPolicy.canPersonallyControl((class_1657)player, s));
+        MedievalSoldierEntity best = null;
+        double bestDist = Double.MAX_VALUE;
+        for (MedievalSoldierEntity s : candidates) {
+            if ((short)s.method_5628() == (short)entityId || (s.method_5628() & 0xFFFF) == (entityId & 0xFFFF)) {
+                double dist = player.method_5858((class_1297)s);
+                if (dist < bestDist && dist <= maxDistanceSq) {
+                    bestDist = dist;
+                    best = s;
+                }
+            }
+        }
+        if (best != null) {
+            return best;
+        }
+        for (MedievalSoldierEntity s : candidates) {
+            if (s.isInventoryGuiOpen() && player.method_5858((class_1297)s) <= maxDistanceSq) {
+                return s;
+            }
+        }
+        return null;
     }
 
     private static MedievalSoldierEntity editingSoldier(class_3222 player) {
